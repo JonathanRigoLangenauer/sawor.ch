@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>BSW 250 - Sawor Lighting</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body.datasheet-page {
+				background: #000;
+				color: #ccc;
+			}
+
+			#datasheet-layout {
+				display: flex;
+				gap: 2.5em;
+				max-width: 1800px;
+				margin: 0 auto;
+				padding: 3em 2em;
+				box-sizing: border-box;
+				align-items: flex-start;
+			}
+
+			#left-column {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				gap: 1.25em;
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			.gallery-main {
+				width: 50%;
+				min-height: 0;
+				margin: 0;
+				background: transparent;
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+
+			.gallery-main img {
+				max-width: 100%;
+				max-height: 100%;
+				width: auto;
+				height: auto;
+				object-fit: contain;
+				display: block;
+				transition: opacity 0.25s ease;
+			}
+
+			.gallery-thumbs {
+				display: flex;
+				gap: 0.6em;
+				width: 50%;
+				margin: 0;
+			}
+
+			.gallery-thumbs .thumb {
+				flex: 1;
+				aspect-ratio: 2/3;
+				background: transparent;
+				border: none;
+				border-radius: 0;
+				overflow: hidden;
+				cursor: pointer;
+				transition: opacity 0.2s ease, transform 0.15s ease;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.gallery-thumbs .thumb:hover {
+				opacity: 0.75;
+				transform: translateY(-2px);
+			}
+
+			.gallery-thumbs .thumb.active {
+				opacity: 1;
+			}
+
+			.gallery-thumbs .thumb img {
+				max-width: 100%;
+				max-height: 100%;
+				width: auto;
+				height: auto;
+				object-fit: contain;
+				display: block;
+				pointer-events: none;
+			}
+
+			.gallery-caption {
+				background: #111;
+				border: 1px solid #2a2a2a;
+				border-radius: 4px;
+				padding: 1.25em 1.5em;
+				color: #aaa;
+				font-size: 0.9em;
+				line-height: 1.7;
+				margin-top: auto;
+			}
+
+			.gallery-caption h4 {
+				color: #fff;
+				margin: 0 0 0.5em 0;
+				font-size: 1em;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+
+			.gallery-caption p {
+				margin: 0;
+			}
+
+			#datasheet-title {
+				width: 100%;
+				padding: 2em 2em 0;
+				color: #fff;
+				font-size: 1.4em;
+				font-weight: 700;
+				letter-spacing: 0.05em;
+				text-align: center;
+			}
+
+			#back-link {
+				display: block;
+				text-align: center;
+				padding: 0.75em 2em 0;
+				color: #aaa;
+				font-size: 0.9em;
+				text-decoration: none;
+				letter-spacing: 0.05em;
+			}
+
+			#back-link:hover {
+				color: #fff;
+			}
+
+			#right-column {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.datasheet-table-wrapper {
+				background: #d4d4d4;
+				border-radius: 6px;
+				padding: 1.5em;
+				color: #111;
+			}
+
+			.datasheet-table-wrapper h3 {
+				margin: 0 0 1em 0;
+				font-size: 1em;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: #333;
+				border-bottom: 2px solid #999;
+				padding-bottom: 0.5em;
+			}
+
+			.datasheet-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.9em;
+			}
+
+			.datasheet-table thead th {
+				background: #aaa;
+				color: #111;
+				text-align: left;
+				padding: 0.6em 1em;
+				font-weight: 700;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				font-size: 0.85em;
+			}
+
+			.datasheet-table tbody tr {
+				border-bottom: 1px solid #bbb;
+			}
+
+			.datasheet-table tbody tr:last-child {
+				border-bottom: none;
+			}
+
+			.datasheet-table tbody tr:nth-child(even) {
+				background: #c8c8c8;
+			}
+
+			.datasheet-table tbody tr:nth-child(odd) {
+				background: #d4d4d4;
+			}
+
+			.datasheet-table tbody td {
+				padding: 0.6em 1em;
+				color: #222;
+			}
+		</style>
+	</head>
+	<body class="is-preload datasheet-page">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Page Title -->
+					<h2 id="datasheet-title">BSW 250</h2>
+					<a id="back-link" href="index.html">&larr; Back to Products</a>
+
+				<!-- Main Layout -->
+					<div id="datasheet-layout">
+
+						<!-- Left: Image Gallery + Caption -->
+						<div id="left-column">
+
+							<!-- Hero image -->
+							<div class="gallery-main">
+								<img id="gallery-hero" src="images/data01.jpg" alt="BSW 250 main view" />
+							</div>
+
+							<!-- 3 clickable thumbnails -->
+							<div class="gallery-thumbs">
+								<div class="thumb active" data-src="images/data01.jpg">
+									<img src="images/data01.jpg" alt="View 1" />
+								</div>
+								<div class="thumb" data-src="images/data02.jpg">
+									<img src="images/data02.jpg" alt="View 2" />
+								</div>
+								<div class="thumb" data-src="images/data03.jpg">
+									<img src="images/data03.jpg" alt="View 3" />
+								</div>
+							</div>
+
+							<!-- Caption -->
+							<div class="gallery-caption">
+								<h4>About This Product</h4>
+								<p>The BSW 250 is a high-output moving head combining beam, spot, and wash in one compact fixture. CMY color mixing, a motorized 3&deg;&ndash;35&deg; zoom, dual prisms, 10 static and 7 rotating gobos, and linear frost give you complete creative range &mdash; from razor-sharp aerial beams to soft, even washes. 540&deg;/270&deg; pan/tilt with 16-bit resolution and automatic repositioning ensure smooth, precise movement. Bright. Flexible. Reliable. Built for stages, clubs, touring, and events where performance cannot be compromised.</p>
+							</div>
+
+						</div>
+
+						<!-- Right: Data Table -->
+						<div id="right-column">
+							<div class="datasheet-table-wrapper">
+								<h3>Specifications</h3>
+								<table class="datasheet-table">
+									<thead>
+										<tr>
+											<th>Parameter</th>
+											<th>Value</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr><td>Product Type</td><td>LED Beam Spot Wash Moving Head</td></tr>
+										<tr><td>Application</td><td>Concerts, clubs, theatres, rental, events</td></tr>
+										<tr><td>Light Source</td><td>1 &times; 250W high-output white LED</td></tr>
+										<tr><td>LED Lifetime</td><td>&ge; 20,000 hours</td></tr>
+										<tr><td>Color Temperature</td><td>7,000 K</td></tr>
+										<tr><td>Illuminance</td><td>up to 85,000 lux @ 5 m</td></tr>
+										<tr><td>Beam Angle</td><td>3&deg; &ndash; 35&deg; motorized zoom</td></tr>
+										<tr><td>Function Modes</td><td>Beam, Spot, Wash</td></tr>
+										<tr><td>Pan</td><td>540&deg; (16-bit resolution)</td></tr>
+										<tr><td>Tilt</td><td>270&deg; (16-bit resolution)</td></tr>
+										<tr><td>Automatic Repositioning</td><td>Yes</td></tr>
+										<tr><td>Color Wheel</td><td>8 colors + open</td></tr>
+										<tr><td>Color Mixing</td><td>CMY color mixing</td></tr>
+										<tr><td>CTO Filter</td><td>Linear CTO 2,700 &ndash; 7,000 K</td></tr>
+										<tr><td>Static Gobos</td><td>10 gobos + open</td></tr>
+										<tr><td>Rotating Gobos</td><td>7 interchangeable gobos + open</td></tr>
+										<tr><td>Gobo Indexing</td><td>Yes</td></tr>
+										<tr><td>Prism 1</td><td>8-facet rotating prism</td></tr>
+										<tr><td>Prism 2</td><td>16-facet rotating prism</td></tr>
+										<tr><td>Frost Filter</td><td>Linear frost</td></tr>
+										<tr><td>Focus</td><td>Motorized focus</td></tr>
+										<tr><td>Iris</td><td>Motorized iris</td></tr>
+										<tr><td>Dimmer</td><td>0 &ndash; 100% electronic dimming</td></tr>
+										<tr><td>Dimmer Curves</td><td>4 selectable curves</td></tr>
+										<tr><td>Strobe</td><td>1 &ndash; 25 Hz</td></tr>
+										<tr><td>Control Protocols</td><td>DMX512, RDM</td></tr>
+										<tr><td>DMX Channels</td><td>18 / 22 / 26 CH</td></tr>
+										<tr><td>Operating Modes</td><td>DMX, Auto, Sound, Master/Slave</td></tr>
+										<tr><td>Display</td><td>2.4&quot; LCD display</td></tr>
+										<tr><td>Input Voltage</td><td>AC 100 &ndash; 240 V, 50/60 Hz</td></tr>
+										<tr><td>Power Consumption</td><td>350 W max</td></tr>
+										<tr><td>Power Connector</td><td>PowerCON-compatible In/Out</td></tr>
+										<tr><td>DMX Connector</td><td>3-pin XLR In/Out</td></tr>
+										<tr><td>Housing</td><td>Flame-retardant ABS and aluminium</td></tr>
+										<tr><td>Cooling</td><td>Intelligent temperature-controlled fan</td></tr>
+										<tr><td>IP Rating</td><td>IP20</td></tr>
+										<tr><td>Operating Temperature</td><td>-10 &deg;C to +45 &deg;C</td></tr>
+										<tr><td>Mounting</td><td>Omega brackets, truss mounting</td></tr>
+										<tr><td>Safety Attachment</td><td>Yes</td></tr>
+										<tr><td>Dimensions</td><td>360 &times; 260 &times; 500 mm</td></tr>
+										<tr><td>Net Weight</td><td>12.5 kg</td></tr>
+										<tr><td>Finish</td><td>Matte black</td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				(function() {
+					var hero = document.getElementById('gallery-hero');
+					var thumbs = document.querySelectorAll('.gallery-thumbs .thumb');
+
+					thumbs.forEach(function(thumb) {
+						thumb.addEventListener('click', function() {
+							var src = this.getAttribute('data-src');
+							hero.style.opacity = '0';
+							setTimeout(function() {
+								hero.src = src;
+								hero.style.opacity = '1';
+							}, 150);
+							thumbs.forEach(function(t) { t.classList.remove('active'); });
+							this.classList.add('active');
+						}.bind(thumb));
+					});
+				})();
+			</script>
+
+	</body>
+</html>
