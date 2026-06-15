@@ -4,14 +4,52 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Sawor Light</title>
+		<title>Sawor Lighting — Professional LED Stage Lighting</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Sawor Lighting offers professional LED stage fixtures including moving heads and COB PARs for live events, clubs, and installations." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="alternate" hreflang="en" href="index.html" />
+		<link rel="alternate" hreflang="de" href="de/index.html" />
+		<link rel="alternate" hreflang="x-default" href="index.html" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="manifest" href="/images/site.webmanifest">
 		<style>
+			#lang-switcher {
+				position: fixed;
+				top: 1em;
+				right: 1.5em;
+				z-index: 9999;
+				display: flex;
+				gap: 0.4em;
+			}
+
+			#lang-switcher a {
+				background: rgba(0, 0, 0, 0.55);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				color: #fff;
+				padding: 0.35em 0.75em;
+				font-size: 0.75em;
+				letter-spacing: 0.1em;
+				text-decoration: none;
+				border-radius: 3px;
+				text-transform: uppercase;
+				transition: background 0.2s ease;
+			}
+
+			#lang-switcher a:hover {
+				background: rgba(255, 255, 255, 0.15);
+			}
+
+			#lang-switcher a.active {
+				background: rgba(255, 255, 255, 0.1);
+				border-color: rgba(255, 255, 255, 0.5);
+			}
 			#banner {
 				position: relative;
 				overflow: hidden;
@@ -49,7 +87,11 @@
 	</head>
 	<body class="is-preload">
 
-
+		<!-- Language Switcher -->
+		<div id="lang-switcher">
+			<a href="index.html" class="active">EN</a>
+			<a href="de/index.html">DE</a>
+		</div>
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
