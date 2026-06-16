@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>LED-Beam 120 – User Manual | Bedienungsanleitung</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body, html {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				background: #000;
+				color: #ccc;
+			}
+
+			#manual-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0.75em 1.5em;
+				background: #111;
+				border-bottom: 1px solid #2a2a2a;
+				flex-wrap: wrap;
+				gap: 0.5em;
+			}
+
+			#back-link {
+				color: #aaa;
+				text-decoration: none;
+				font-size: 0.85em;
+				letter-spacing: 0.05em;
+			}
+
+			#back-link:hover { color: #fff; }
+
+			#manual-title {
+				color: #fff;
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				margin: 0;
+			}
+
+			#lang-switcher {
+				display: flex;
+				gap: 0.4em;
+			}
+
+			#lang-switcher button {
+				background: rgba(255,255,255,0.05);
+				border: 1px solid rgba(255,255,255,0.2);
+				color: #aaa;
+				padding: 0.35em 0.9em;
+				font-size: 0.8em;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				border-radius: 3px;
+				cursor: pointer;
+				transition: background 0.2s;
+			}
+
+			#lang-switcher button:hover {
+				background: rgba(255,255,255,0.12);
+				color: #fff;
+			}
+
+			#lang-switcher button.active {
+				background: rgba(255,255,255,0.15);
+				border-color: rgba(255,255,255,0.5);
+				color: #fff;
+			}
+
+			#pdf-frame {
+				display: block;
+				width: 100%;
+				height: calc(100vh - 56px);
+				border: none;
+				background: #1a1a1a;
+			}
+
+			#mobile-fallback {
+				display: none;
+				text-align: center;
+				padding: 3em 1.5em;
+				color: #aaa;
+			}
+
+			#mobile-fallback p { margin-bottom: 1.5em; }
+
+			#mobile-fallback a {
+				display: inline-block;
+				background: #555;
+				color: #fff;
+				padding: 0.7em 1.6em;
+				border-radius: 4px;
+				text-decoration: none;
+				font-size: 0.9em;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				border: 1px solid #777;
+				margin: 0.3em;
+			}
+
+			@media (max-width: 600px) {
+				#pdf-frame { display: none; }
+				#mobile-fallback { display: block; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="manual-header">
+			<a id="back-link" href="javascript:history.back()">&larr; <span id="back-label">Back</span></a>
+			<span id="manual-title">LED-Beam 120 &ndash; <span id="doc-label">User Manual</span></span>
+			<div id="lang-switcher">
+				<button id="btn-en" onclick="switchLang('en')">EN</button>
+				<button id="btn-de" onclick="switchLang('de')">DE</button>
+			</div>
+		</div>
+
+		<iframe id="pdf-frame" src="" title="User Manual"></iframe>
+
+		<div id="mobile-fallback">
+			<p id="mobile-text">PDF cannot be displayed on this device. Please download it directly.</p>
+			<a id="dl-en" href="documents/LED-Beam-120-User-Manual-EN.pdf" download>Download EN</a>
+			<a id="dl-de" href="documents/LED-Beam-120-User-Manual-DE.pdf" download>Download DE</a>
+		</div>
+
+		<script>
+			var currentLang = 'en';
+
+			var strings = {
+				en: {
+					back: 'Back',
+					docLabel: 'User Manual',
+					mobileText: 'PDF cannot be displayed on this device. Please download it directly.'
+				},
+				de: {
+					back: 'Zurück',
+					docLabel: 'Bedienungsanleitung',
+					mobileText: 'PDF kann auf diesem Gerät nicht angezeigt werden. Bitte direkt herunterladen.'
+				}
+			};
+
+			function switchLang(lang) {
+				currentLang = lang;
+				var frame = document.getElementById('pdf-frame');
+				var src = lang === 'de'
+					? 'documents/LED-Beam-120-User-Manual-DE.pdf'
+					: 'documents/LED-Beam-120-User-Manual-EN.pdf';
+				frame.src = src;
+
+				document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+				document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+
+				var s = strings[lang];
+				document.getElementById('back-label').textContent = s.back;
+				document.getElementById('doc-label').textContent = s.docLabel;
+				document.getElementById('mobile-text').textContent = s.mobileText;
+				document.documentElement.lang = lang;
+			}
+
+			// URL param takes priority, then browser language, then default EN
+			var params = new URLSearchParams(window.location.search);
+			var paramLang = (params.get('lang') || '').toLowerCase();
+			if (paramLang === 'en' || paramLang === 'de') {
+				switchLang(paramLang);
+			} else {
+				var userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+				switchLang(userLang.startsWith('de') ? 'de' : 'en');
+			}
+		</script>
+
+	</body>
+</html>
