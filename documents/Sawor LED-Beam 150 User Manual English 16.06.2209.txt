@@ -1,0 +1,200 @@
+Sawor
+ Switzerland
+
+CompactBeam
+
+
+
+
+User Manual
+English
+Safety Information
+General
+This product is intended for professional use only. Improper installation, operation, or maintenance may result in electric shock, fire, burns, eye injury, or other hazards. Read and follow all safety instructions before operating the fixture.
+Electric Shock Hazard
+This fixture operates at hazardous voltages and can cause serious injury or death.
+    • Do not expose the fixture to rain, moisture, or excessive humidity.
+    • Disconnect power before cleaning, servicing, or moving the fixture.
+    • Do not operate the fixture if it is damaged or malfunctioning.
+    • Service must be carried out by qualified personnel only.
+
+Fire and Burn Hazard
+The light beam and fixture surfaces can become extremely hot during operation.
+    • Keep combustible materials away from the fixture and its beam.
+    • Do not focus multiple fixtures on the same area at close range.
+    • Maintain at least 0.2 m (8 in.) clearance from illuminated surfaces.
+    • Ensure that ventilation openings remain unobstructed.
+    • Allow the fixture to cool before handling or servicing.
+
+Eye Hazard
+This fixture produces a high-intensity light output.
+    • Never look directly into the light source.
+    • Do not view the beam through magnifying lenses, binoculars, telescopes, cameras, or similar optical devices.
+    • Avoid prolonged exposure to the beam at close range.
+
+Table of Contents
+
+Safety Information	2
+Table of Contents	3
+Introduction	4
+Technical Specifications	5
+Fixture Menu	6
+Mounting	7
+Effects	7
+Cleaning and Maintenance	9
+DMX Protocol	9
+
+
+Introduction
+The Sawor CompactBeam is a compact, low noise moving-head fixture powered by a high-output LED light source. Its narrow beam angle, vibrant color wheel, and prism effects allow the creation of striking aerial looks, dynamic movement, and eye-catching stage effects.
+Featuring dimming, strobe functionality, and precise pan and tilt movement, the fixture delivers top performance for live events, clubs, venues, and mobile entertainment applications. Its lightweight yet durable construction makes it equally suitable for touring productions and permanent installations.
+The fixture supports industry-standard DMX512 control and integrates seamlessly with professional lighting systems, providing reliable operation and flexible programming options for a wide range of lighting designs.
+The fixture is supplied with this user manual, a 1.5 m (5 ft) power cable and a mounting bracket. 
+
+Technical Specifications
+These specifications were measured by Sawor in Switzerland for this specific fixture. 
+Parameter	Specification
+Fixture
+Housing Color	Black
+Height	340 mm
+Width	230 mm
+Depth	150 mm
+Weight	3 kg
+Cooling	Active cooling
+IP Rating	IP 33 (Indoor use only) 
+Light Source
+Light Source	60 W COB LED
+Color Temperature	8500 K White
+Optical System
+Beam Angle	2°
+Illuminance	550'000 lux @ 2m
+22’000 lux @ 10m
+Peak Intensity	2’200'000 cd
+Gobo Wheel	7 + open
+Color Wheel	7 + open
+Prism	18-Facet Rotating Prism
+Beam Angle (Prism) 	14°
+Control & Operation
+Power Supply	220-240 V AC, 50Hz
+DMX Channels	12
+Power Consumption	80 W max.
+Apparent Power	140 VA max. 
+Power Switch	Yes
+Built-in Microphone	Yes
+Grounding (PE)	Yes
+Connections
+Power Input	Neutrik® PowerCON® Compatible Connector
+DMX-Input	3-Pin XLR
+DMX-Output	3-Pin XLR
+
+Fixture Menu
+This fixture is equipped with an LCD control panel that allows access to all settings and functions.
+Press the MENU button to cycle through the available menu items. Use the UP and DOWN buttons to select the desired option or adjust a value. Press ENTER to confirm and save the selected setting.
+Example: To set the DMX address, press MENU until the DMX Address screen is displayed. Use the UP and DOWN buttons to select the desired address, then press ENTER to save the setting.
+Function	Menu Item	Values 	Description
+DMX Adress			Sets the fixture's DMX start address.
+Channel Mode
+			Fixed 12-channel DMX mode.
+Operating Mode			DMX control mode.
+			Automatic show mode.
+			Sound-active mode.
+Pan Reverse			Reverses pan movement direction.
+			
+Tilt Reverse			Reverses tilt movement direction.	
+			
+Sound Sensitivity			Microphone sensitivity from low to high.
+Display Backlight			Keeps display illuminated.
+			
+Display Invert			Flips the display for inverted installation.
+			
+Internal Fixture Temperature		-	Displays the internal fixture temperature in ° C.
+Software Version		-	Displays installed firmware version.
+Factory Reset			Restores factory default settings.
+			
+
+Mounting
+The fixture is supplied with a mounting bracket. The bracket can be attached to the rear of the fixture using the pre-installed screws. Once installed, a suitable clamp may be fixed to the bracket for mounting on truss systems, lighting stands, or other supporting structures.  
+When the fixture is suspended above ground level, an appropriate safety cable must always be used in addition to the primary mounting method. Attach the safety cable around one of the fixture handles and ensure that it is rated for the weight of the fixture and complies with local safety regulations.
+Before each use, verify that all screws, clamps, and safety devices are securely fastened and free from damage.
+Effects 
+Pan & Tilt
+The fixture’s moving head can be panned through 540° and tilted through 180° using coarse or fine control channels.
+Gobos
+This Fixture incorporates a 7-pattern gobo wheel.
+
+Any gobo can be projected statically. Gobos can be shaken, and the gobo wheel can be rotated clockwise or counter-clockwise.
+Prism 
+The fixture incorporates a prism that can be inserted into the beam to give split beam effects. The prism can be rotated clockwise or counter-clockwise. 
+Strobe
+This Fixtures provides strobe effects of variable speeds up to 25 hz. 
+Electronic dimming 
+The LED light source can be dimmed from 0-100%. It can be switched on or off at any time. 
+Color wheel
+The fixture incorporates a color wheel, with seven colors plus open. Individual color slots can be selected, or the wheel can be rotated continuously.
+
+Cleaning and Maintenance
+Regular cleaning is essential to maintain light output and ensure reliable operation. Dust, smoke fluid residue, and other airborne particles can reduce performance and cause overheating.
+Cleaning intervals depend on the operating environment. Fixtures used in dusty conditions or near smoke and fog machines may require more frequent cleaning.
+To clean the fixture:
+    1. Disconnect the fixture from power and allow it to cool completely.
+    2. Remove dust from the housing and ventilation openings using a soft brush, vacuum cleaner, or low-pressure compressed air.
+    3. Clean lenses and exterior surfaces with a soft, lint-free cloth lightly dampened with mild detergent or glass cleaner.
+    4. Dry all surfaces thoroughly before reconnecting power.
+Important: Do not use solvents, abrasive cleaners, or excessive force, as these may damage the fixture. Damage resulting from inadequate maintenance is not covered by warranty.
+DMX Protocol
+Chan.	Value	Function
+1	0-255	Pan 0°-540°
+2	0-255	Pan (fine control) 
+3	0-255	Tilt 0°-180°
+4	0-255	Tilt (fine control) 
+5	0-255	Pan/tilt speed, fast-slow
+6	0-255	Dimmer 0-100%
+7	Strobe
+	0-15	Off
+	16-255	Strobe, slow-fast
+8	Color Wheel
+	
+	0-15	Open/White
+	16-31	Red
+	32-47	Yellow
+	48-63	Green
+	64-79	Orange
+	80-95	Blue
+	96-111	Magenta
+	112-127	Cyan
+	128-255	Clockwise, slow-fast
+9	Gobo Wheel
+	
+	0-7		Open
+	8-15	Gobo 1
+	16-23	Gobo 2
+	24-31	Gobo 3
+	32-39	Gobo 4
+	40-47	Gobo 5
+	48-55	Gobo 6
+	56-63	Gobo 7
+	64-71	Gobo 1 Shake, slow-fast
+	72-79	Gobo 2 Shake, slow-fast
+	80-87	Gobo 3 Shake, slow-fast
+	88-95	Gobo 4 Shake, slow-fast
+	96-103	Gobo 5 Shake, slow-fast
+	104-111	Gobo 6 Shake, slow-fast
+	112-119	Gobo 7 Shake, slow-fast
+	128-255	Clockwise, slow-fast
+10	Prism (18-Facet)
+	0-8	Prism Off
+	8-127	Prism On 
+	128-255	Prism Rotation, slow-fast
+11	Automatic Mode / Sound Control Mode
+	0-50	Automatic Mode Off
+	50-100	Automatic Mode, fast
+	101-200	Automatic Mode, slow
+	201-255	Sound Control Mode
+12	Reset
+	0-249	No Effect
+	250-255	Reset after 3s 
+
+
+
+
+Specifications are subject to change without notice. All values were measured under laboratory conditions and may vary depending on operating environment and manufacturing tolerances.
