@@ -3,307 +3,107 @@
 	<head>
 		<title>LED-Beam 60 - Sawor Lighting</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 		<link rel="alternate" hreflang="en" href="../datasheet.html" />
 		<link rel="alternate" hreflang="de" href="datasheet.html" />
-		<style>
-			#lang-switcher {
-				position: fixed;
-				top: 1em;
-				right: 1.5em;
-				z-index: 9999;
-				display: flex;
-				gap: 0.4em;
-			}
-			#lang-switcher a {
-				background: rgba(0, 0, 0, 0.55);
-				border: 1px solid rgba(255, 255, 255, 0.2);
-				color: #fff;
-				padding: 0.35em 0.75em;
-				font-size: 0.75em;
-				letter-spacing: 0.1em;
-				text-decoration: none;
-				border-radius: 3px;
-				text-transform: uppercase;
-				transition: background 0.2s ease;
-			}
-			#lang-switcher a:hover { background: rgba(255, 255, 255, 0.15); }
-			#lang-switcher a.active { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
-
-			body.datasheet-page {
-				background: #000;
-				color: #ccc;
-			}
-
-			#datasheet-layout {
-				display: flex;
-				gap: 2.5em;
-				max-width: 1800px;
-				margin: 0 auto;
-				padding: 3em 2em;
-				box-sizing: border-box;
-				align-items: flex-start;
-			}
-
-			#left-column {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-				gap: 1.25em;
-				justify-content: flex-start;
-				align-items: center;
-			}
-
-			.gallery-main {
-				width: 50%;
-				min-height: 0;
-				margin: 0;
-				background: transparent;
-				border: none;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				overflow: hidden;
-			}
-
-			.gallery-main img {
-				max-width: 100%;
-				max-height: 100%;
-				width: auto;
-				height: auto;
-				object-fit: contain;
-				display: block;
-				transition: opacity 0.25s ease;
-			}
-
-			.gallery-thumbs {
-				display: flex;
-				gap: 0.6em;
-				width: 50%;
-				margin: 0;
-			}
-
-			.gallery-thumbs .thumb {
-				flex: 1;
-				aspect-ratio: 2/3;
-				background: transparent;
-				border: none;
-				border-radius: 0;
-				overflow: hidden;
-				cursor: pointer;
-				transition: opacity 0.2s ease, transform 0.15s ease;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.gallery-thumbs .thumb:hover {
-				opacity: 0.75;
-				transform: translateY(-2px);
-			}
-
-			.gallery-thumbs .thumb.active { opacity: 1; }
-
-			.gallery-thumbs .thumb img {
-				max-width: 100%;
-				max-height: 100%;
-				width: auto;
-				height: auto;
-				object-fit: contain;
-				display: block;
-				pointer-events: none;
-			}
-
-			.gallery-caption {
-				background: #111;
-				border: 1px solid #2a2a2a;
-				border-radius: 4px;
-				padding: 1.25em 1.5em;
-				color: #aaa;
-				font-size: 0.9em;
-				line-height: 1.7;
-				margin-top: auto;
-			}
-
-			.gallery-caption h4 {
-				color: #fff;
-				margin: 0 0 0.5em 0;
-				font-size: 1em;
-				letter-spacing: 0.05em;
-				text-transform: uppercase;
-			}
-
-			.gallery-caption p { margin: 0; }
-
-			#datasheet-title {
-				width: 100%;
-				padding: 2em 2em 0;
-				color: #fff;
-				font-size: 1.4em;
-				font-weight: 700;
-				letter-spacing: 0.05em;
-				text-align: center;
-			}
-
-			#back-link {
-				display: block;
-				text-align: center;
-				padding: 0.75em 2em 0;
-				color: #aaa;
-				font-size: 0.9em;
-				text-decoration: none;
-				letter-spacing: 0.05em;
-			}
-
-			#back-link:hover { color: #fff; }
-
-			#right-column {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-			}
-
-			.datasheet-table-wrapper {
-				background: #d4d4d4;
-				border-radius: 6px;
-				padding: 1.5em;
-				color: #111;
-			}
-
-			.datasheet-table-wrapper h3 {
-				margin: 0 0 1em 0;
-				font-size: 1em;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
-				color: #333;
-				border-bottom: 2px solid #999;
-				padding-bottom: 0.5em;
-			}
-
-			.datasheet-table {
-				width: 100%;
-				border-collapse: collapse;
-				font-size: 0.9em;
-			}
-
-			.datasheet-table thead th {
-				background: #aaa;
-				color: #111;
-				text-align: left;
-				padding: 0.6em 1em;
-				font-weight: 700;
-				letter-spacing: 0.05em;
-				text-transform: uppercase;
-				font-size: 0.85em;
-			}
-
-			.datasheet-table tbody tr { border-bottom: 1px solid #bbb; }
-			.datasheet-table tbody tr:last-child { border-bottom: none; }
-			.datasheet-table tbody tr:nth-child(even) { background: #c8c8c8; }
-			.datasheet-table tbody tr:nth-child(odd) { background: #d4d4d4; }
-
-			.datasheet-table tbody td {
-				padding: 0.6em 1em;
-				color: #222;
-			}
-		</style>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>tailwind.config = { important: true }</script>
 	</head>
-	<body class="is-preload datasheet-page">
+	<body class="is-preload datasheet-page bg-black text-gray-300">
 
-		<div id="lang-switcher">
-			<a href="../datasheet.html">EN</a>
-			<a href="datasheet.html" class="active">DE</a>
+		<div id="lang-switcher" class="fixed top-4 right-6 z-50 flex gap-1.5">
+			<a href="../datasheet.html" class="bg-black/50 border border-white/20 text-white px-3 py-1 text-xs tracking-widest no-underline rounded uppercase transition-colors hover:bg-white/15 [&.active]:bg-white/10 [&.active]:border-white/50">EN</a>
+			<a href="datasheet.html" class="active bg-black/50 border border-white/20 text-white px-3 py-1 text-xs tracking-widest no-underline rounded uppercase transition-colors hover:bg-white/15 [&.active]:bg-white/10 [&.active]:border-white/50">DE</a>
 		</div>
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Page Title -->
-					<h2 id="datasheet-title">Der Sawor CompactBeam</h2>
-					<a id="back-link" href="index.html">&larr; Zurück zu Produkten</a>
+					<h2 id="datasheet-title" class="w-full pt-8 px-8 pb-0 text-white text-2xl font-bold tracking-wide text-center">Der Sawor CompactBeam</h2>
+					<a id="back-link" href="index.html" class="block text-center pt-3 px-8 text-gray-400 text-sm no-underline tracking-wide hover:text-white">&larr; Zur&#252;ck zu Produkten</a>
 
 				<!-- Main Layout -->
-					<div id="datasheet-layout">
+					<div id="datasheet-layout" class="flex flex-col md:flex-row gap-10 max-w-screen-2xl mx-auto px-8 py-12 items-start">
 
 						<!-- Left: Image Gallery + Caption -->
-						<div id="left-column">
+						<div id="left-column" class="flex flex-col gap-5 items-center w-full md:flex-1">
 
 							<!-- Hero image -->
-							<div class="gallery-main">
-								<img id="gallery-hero" src="../images/120w1.jpg" alt="Hauptansicht" />
+							<div class="gallery-main w-full md:w-1/2 flex items-center justify-center overflow-hidden">
+								<img id="gallery-hero" src="../images/120w1.jpg" alt="Hauptansicht" class="max-w-full h-auto object-contain block transition-opacity duration-300" />
 							</div>
 
 							<!-- 3 clickable thumbnails -->
-							<div class="gallery-thumbs">
-								<div class="thumb active" data-src="../images/120w1.jpg">
-									<img src="../images/120w1.jpg" alt="Ansicht 1" />
+							<div class="gallery-thumbs flex gap-2 w-full md:w-1/2">
+								<div class="thumb active flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/120w1.jpg">
+									<img src="../images/120w1.jpg" alt="Ansicht 1" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
-								<div class="thumb" data-src="../images/120w2.jpg">
-									<img src="../images/120w2.jpg" alt="Ansicht 2" />
+								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/120w2.jpg">
+									<img src="../images/120w2.jpg" alt="Ansicht 2" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
-								<div class="thumb" data-src="../images/120W3.jpg">
-									<img src="../images/120W3.jpg" alt="Ansicht 3" />
+								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/120W3.jpg">
+									<img src="../images/120W3.jpg" alt="Ansicht 3" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 							</div>
 
 							<!-- Caption -->
-							<div class="gallery-caption">
-								<h4>&#220;ber dieses Produkt</h4>
-								<p>Der Sawor CompactBeam liefert mehr als sein Format vermuten l&#228;sst. Mit nur 60 W erreicht er eine Spitzenintensit&#228;t von 2.200.000 cd &mdash; vergleichbar mit branchenüblichen 180-Watt-Strahlern, bei einem Drittel des Stromverbrauchs. Das kompakte Geh&#228;use und das geringe Gewicht erm&#246;glichen den Einsatz überall &mdash; vom Touring-Case bis zur festen Traverseninstallation. Der 2&deg;-Strahl, je 7+1 Farb- und Gobo-R&#228;der sowie ein 18-facettiges rotierendes Prisma bieten das komplette Werkzeug f&#252;r Lufteffekte und ausdrucksstarke B&#252;hnenbilder. Sanftes Dimmen, Stroboskop und pr&#228;zises Pan/Tilt erm&#246;glichen volle kreative Kontrolle &#252;ber DMX512. Leicht und robust &mdash; gleichermassen zuhause auf einer Traverse wie auf einem Touring-Rig. Lieferumfang: Netzkabel und Montagewinkel.</p>
+							<div class="gallery-caption bg-zinc-900 border border-zinc-800 rounded p-5 text-gray-400 text-sm leading-relaxed w-full mt-auto">
+								<h4 class="text-white mb-2 text-sm font-bold tracking-wider uppercase">&#220;ber dieses Produkt</h4>
+								<p class="m-0">Der Sawor CompactBeam liefert mehr als sein Format vermuten l&#228;sst. Mit nur 60 W erreicht er eine Spitzenintensit&#228;t von 2.200.000 cd &mdash; vergleichbar mit branchenüblichen 180-Watt-Strahlern, bei einem Drittel des Stromverbrauchs. Das kompakte Geh&#228;use und das geringe Gewicht erm&#246;glichen den Einsatz überall &mdash; vom Touring-Case bis zur festen Traverseninstallation. Der 2&deg;-Strahl, je 7+1 Farb- und Gobo-R&#228;der sowie ein 18-facettiges rotierendes Prisma bieten das komplette Werkzeug f&#252;r Lufteffekte und ausdrucksstarke B&#252;hnenbilder. Sanftes Dimmen, Stroboskop und pr&#228;zises Pan/Tilt erm&#246;glichen volle kreative Kontrolle &#252;ber DMX512. Leicht und robust &mdash; gleichermassen zuhause auf einer Traverse wie auf einem Touring-Rig. Lieferumfang: Netzkabel und Montagewinkel.</p>
 							</div>
 
 						</div>
 
 						<!-- Right: Data Table -->
-						<div id="right-column">
-							<div class="datasheet-table-wrapper">
-								<h3>Spezifikationen</h3>
-								<table class="datasheet-table">
+						<div id="right-column" class="flex flex-col w-full md:flex-1">
+							<div class="datasheet-table-wrapper bg-gray-300 rounded-md p-6 text-zinc-900 overflow-x-auto">
+								<h3 class="mb-4 text-sm font-bold uppercase tracking-widest text-zinc-700 border-b-2 border-gray-400 pb-2">Spezifikationen</h3>
+								<table class="datasheet-table w-full border-collapse text-sm">
 									<thead>
 										<tr>
-											<th>Parameter</th>
-											<th>Spezifikation</th>
+											<th class="bg-gray-400 text-zinc-900 text-left px-4 py-2 font-bold uppercase text-xs tracking-wider">Parameter</th>
+											<th class="bg-gray-400 text-zinc-900 text-left px-4 py-2 font-bold uppercase text-xs tracking-wider">Spezifikation</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Geh&#228;use</td></tr>
-										<tr><td>Geh&#228;usefarbe</td><td>Schwarz</td></tr>
-										<tr><td>H&#246;he</td><td>340 mm</td></tr>
-										<tr><td>Breite</td><td>230 mm</td></tr>
-										<tr><td>Tiefe</td><td>150 mm</td></tr>
-										<tr><td>Gewicht</td><td>3 kg</td></tr>
-										<tr><td>K&#252;hlung</td><td>Aktive K&#252;hlung</td></tr>
-										<tr><td>IP-Schutzklasse</td><td>IP 33 (nur Innenbereich)</td></tr>
-										<tr><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Lichtquelle</td></tr>
-										<tr><td>Lichtquelle</td><td>60 W COB LED</td></tr>
-										<tr><td>Farbtemperatur</td><td>8.500 K weiss</td></tr>
-										<tr><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Optisches System</td></tr>
-										<tr><td>Abstrahlwinkel</td><td>2&deg;</td></tr>
-										<tr><td>Beleuchtungsst&#228;rke</td><td>550.000 lux @ 2 m<br>22.000 lux @ 10 m</td></tr>
-										<tr><td>Spitzenintensit&#228;t</td><td>2.200.000 cd</td></tr>
-										<tr><td>Gobo-Rad</td><td>7 + offen</td></tr>
-										<tr><td>Farbrad</td><td>7 + offen</td></tr>
-										<tr><td>Prisma</td><td>18-facettiges rotierendes Prisma</td></tr>
-										<tr><td>Abstrahlwinkel (Prisma)</td><td>14&deg;</td></tr>
-										<tr><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Steuerung &amp; Betrieb</td></tr>
-										<tr><td>Stromversorgung</td><td>220 &ndash; 240 V AC, 50 Hz</td></tr>
-										<tr><td>DMX-Kan&#228;le</td><td>12</td></tr>
-										<tr><td>Leistungsaufnahme</td><td>80 W max.</td></tr>
-										<tr><td>Scheinleistung</td><td>140 VA max.</td></tr>
-										<tr><td>Netzschalter</td><td>Ja</td></tr>
-										<tr><td>Eingebautes Mikrofon</td><td>Ja</td></tr>
-										<tr><td>Erdung (PE)</td><td>Ja</td></tr>
-										<tr><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Anschl&#252;sse</td></tr>
-										<tr><td>Stromanschluss</td><td>Neutrik&reg; PowerCON&reg; kompatibler Stecker</td></tr>
-										<tr><td>DMX-Eingang</td><td>3-Pin XLR</td></tr>
-										<tr><td>DMX-Ausgang</td><td>3-Pin XLR</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Geh&#228;use</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Geh&#228;usefarbe</td><td class="px-4 py-2 text-zinc-800">Schwarz</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">H&#246;he</td><td class="px-4 py-2 text-zinc-800">340 mm</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Breite</td><td class="px-4 py-2 text-zinc-800">230 mm</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Tiefe</td><td class="px-4 py-2 text-zinc-800">150 mm</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Gewicht</td><td class="px-4 py-2 text-zinc-800">3 kg</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">K&#252;hlung</td><td class="px-4 py-2 text-zinc-800">Aktive K&#252;hlung</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">IP-Schutzklasse</td><td class="px-4 py-2 text-zinc-800">IP 33 (nur Innenbereich)</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Lichtquelle</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Lichtquelle</td><td class="px-4 py-2 text-zinc-800">60 W COB LED</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Farbtemperatur</td><td class="px-4 py-2 text-zinc-800">8.500 K weiss</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Optisches System</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Abstrahlwinkel</td><td class="px-4 py-2 text-zinc-800">2&deg;</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Beleuchtungsst&#228;rke</td><td class="px-4 py-2 text-zinc-800">550.000 lux @ 2 m<br>22.000 lux @ 10 m</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Spitzenintensit&#228;t</td><td class="px-4 py-2 text-zinc-800">2.200.000 cd</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Gobo-Rad</td><td class="px-4 py-2 text-zinc-800">7 + offen</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Farbrad</td><td class="px-4 py-2 text-zinc-800">7 + offen</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Prisma</td><td class="px-4 py-2 text-zinc-800">18-facettiges rotierendes Prisma</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Abstrahlwinkel (Prisma)</td><td class="px-4 py-2 text-zinc-800">14&deg;</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Steuerung &amp; Betrieb</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Stromversorgung</td><td class="px-4 py-2 text-zinc-800">220 &ndash; 240 V AC, 50 Hz</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">DMX-Kan&#228;le</td><td class="px-4 py-2 text-zinc-800">12</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Leistungsaufnahme</td><td class="px-4 py-2 text-zinc-800">80 W max.</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Scheinleistung</td><td class="px-4 py-2 text-zinc-800">140 VA max.</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Netzschalter</td><td class="px-4 py-2 text-zinc-800">Ja</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Eingebautes Mikrofon</td><td class="px-4 py-2 text-zinc-800">Ja</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Erdung (PE)</td><td class="px-4 py-2 text-zinc-800">Ja</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td colspan="2" style="font-weight:600; padding:0.5em 0.6em 0.3em; font-size:0.78em; text-transform:uppercase; letter-spacing:0.1em; color:#999;">Anschl&#252;sse</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Stromanschluss</td><td class="px-4 py-2 text-zinc-800">Neutrik&reg; PowerCON&reg; kompatibler Stecker</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">DMX-Eingang</td><td class="px-4 py-2 text-zinc-800">3-Pin XLR</td></tr>
+										<tr class="border-b border-gray-300 last:border-b-0 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">DMX-Ausgang</td><td class="px-4 py-2 text-zinc-800">3-Pin XLR</td></tr>
 									</tbody>
 								</table>
-								<div style="margin-top: 1.25em; text-align: right;">
-									<a href="../manual.html?lang=de"
-									   style="display: inline-block; background: #555; color: #fff; padding: 0.55em 1.4em; border-radius: 4px; text-decoration: none; font-size: 0.85em; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid #777;">
+								<div class="mt-5 text-right">
+									<a href="../manual.html?lang=de" class="inline-block bg-zinc-600 text-white px-5 py-2 rounded text-xs tracking-wider uppercase no-underline border border-zinc-500 hover:bg-zinc-500">
 										Bedienungsanleitung
 									</a>
 								</div>

@@ -3,290 +3,91 @@
 	<head>
 		<title>Sawor LED-BSW - Sawor Lighting</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 		<link rel="alternate" hreflang="en" href="../datasheet-bsw250.html" />
 		<link rel="alternate" hreflang="de" href="datasheet-bsw250.html" />
-		<style>
-			#lang-switcher {
-				position: fixed;
-				top: 1em;
-				right: 1.5em;
-				z-index: 9999;
-				display: flex;
-				gap: 0.4em;
-			}
-			#lang-switcher a {
-				background: rgba(0, 0, 0, 0.55);
-				border: 1px solid rgba(255, 255, 255, 0.2);
-				color: #fff;
-				padding: 0.35em 0.75em;
-				font-size: 0.75em;
-				letter-spacing: 0.1em;
-				text-decoration: none;
-				border-radius: 3px;
-				text-transform: uppercase;
-				transition: background 0.2s ease;
-			}
-			#lang-switcher a:hover { background: rgba(255, 255, 255, 0.15); }
-			#lang-switcher a.active { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
-
-			body.datasheet-page {
-				background: #000;
-				color: #ccc;
-			}
-
-			#datasheet-layout {
-				display: flex;
-				gap: 2.5em;
-				max-width: 1800px;
-				margin: 0 auto;
-				padding: 3em 2em;
-				box-sizing: border-box;
-				align-items: flex-start;
-			}
-
-			#left-column {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-				gap: 1.25em;
-				justify-content: flex-start;
-				align-items: center;
-			}
-
-			.gallery-main {
-				width: 50%;
-				min-height: 0;
-				margin: 0;
-				background: transparent;
-				border: none;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				overflow: hidden;
-			}
-
-			.gallery-main img {
-				max-width: 100%;
-				max-height: 100%;
-				width: auto;
-				height: auto;
-				object-fit: contain;
-				display: block;
-				transition: opacity 0.25s ease;
-			}
-
-			.gallery-thumbs {
-				display: flex;
-				gap: 0.6em;
-				width: 50%;
-				margin: 0;
-			}
-
-			.gallery-thumbs .thumb {
-				flex: 1;
-				aspect-ratio: 2/3;
-				background: transparent;
-				border: none;
-				border-radius: 0;
-				overflow: hidden;
-				cursor: pointer;
-				transition: opacity 0.2s ease, transform 0.15s ease;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.gallery-thumbs .thumb:hover {
-				opacity: 0.75;
-				transform: translateY(-2px);
-			}
-
-			.gallery-thumbs .thumb.active { opacity: 1; }
-
-			.gallery-thumbs .thumb img {
-				max-width: 100%;
-				max-height: 100%;
-				width: auto;
-				height: auto;
-				object-fit: contain;
-				display: block;
-				pointer-events: none;
-			}
-
-			.gallery-caption {
-				background: #111;
-				border: 1px solid #2a2a2a;
-				border-radius: 4px;
-				padding: 1.25em 1.5em;
-				color: #aaa;
-				font-size: 0.9em;
-				line-height: 1.7;
-				margin-top: auto;
-			}
-
-			.gallery-caption h4 {
-				color: #fff;
-				margin: 0 0 0.5em 0;
-				font-size: 1em;
-				letter-spacing: 0.05em;
-				text-transform: uppercase;
-			}
-
-			.gallery-caption p { margin: 0; }
-
-			#datasheet-title {
-				width: 100%;
-				padding: 2em 2em 0;
-				color: #fff;
-				font-size: 1.4em;
-				font-weight: 700;
-				letter-spacing: 0.05em;
-				text-align: center;
-			}
-
-			#back-link {
-				display: block;
-				text-align: center;
-				padding: 0.75em 2em 0;
-				color: #aaa;
-				font-size: 0.9em;
-				text-decoration: none;
-				letter-spacing: 0.05em;
-			}
-
-			#back-link:hover { color: #fff; }
-
-			#right-column {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-			}
-
-			.datasheet-table-wrapper {
-				background: #d4d4d4;
-				border-radius: 6px;
-				padding: 1.5em;
-				color: #111;
-			}
-
-			.datasheet-table-wrapper h3 {
-				margin: 0 0 1em 0;
-				font-size: 1em;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
-				color: #333;
-				border-bottom: 2px solid #999;
-				padding-bottom: 0.5em;
-			}
-
-			.datasheet-table {
-				width: 100%;
-				border-collapse: collapse;
-				font-size: 0.9em;
-			}
-
-			.datasheet-table thead th {
-				background: #aaa;
-				color: #111;
-				text-align: left;
-				padding: 0.6em 1em;
-				font-weight: 700;
-				letter-spacing: 0.05em;
-				text-transform: uppercase;
-				font-size: 0.85em;
-			}
-
-			.datasheet-table tbody tr { border-bottom: 1px solid #bbb; }
-			.datasheet-table tbody tr:last-child { border-bottom: none; }
-			.datasheet-table tbody tr:nth-child(even) { background: #c8c8c8; }
-			.datasheet-table tbody tr:nth-child(odd) { background: #d4d4d4; }
-
-			.datasheet-table tbody td {
-				padding: 0.6em 1em;
-				color: #222;
-			}
-		</style>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>tailwind.config = { important: true }</script>
 	</head>
-	<body class="is-preload datasheet-page">
+	<body class="is-preload datasheet-page bg-black text-gray-300">
 
-		<div id="lang-switcher">
-			<a href="../datasheet-bsw250.html">EN</a>
-			<a href="datasheet-bsw250.html" class="active">DE</a>
+		<div id="lang-switcher" class="fixed top-4 right-6 z-50 flex gap-1.5">
+			<a href="../datasheet-bsw250.html" class="bg-black/50 border border-white/20 text-white px-3 py-1 text-xs tracking-widest no-underline rounded uppercase transition-colors hover:bg-white/15 [&.active]:bg-white/10 [&.active]:border-white/50">EN</a>
+			<a href="datasheet-bsw250.html" class="active bg-black/50 border border-white/20 text-white px-3 py-1 text-xs tracking-widest no-underline rounded uppercase transition-colors hover:bg-white/15 [&.active]:bg-white/10 [&.active]:border-white/50">DE</a>
 		</div>
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Page Title -->
-					<h2 id="datasheet-title">Sawor LED-BSW</h2>
-					<a id="back-link" href="index.html">&larr; Zur&#252;ck zu Produkten</a>
+					<h2 id="datasheet-title" class="w-full pt-8 px-8 pb-0 text-white text-2xl font-bold tracking-wide text-center">Sawor LED-BSW</h2>
+					<a id="back-link" href="index.html" class="block text-center pt-3 px-8 text-gray-400 text-sm no-underline tracking-wide hover:text-white">&larr; Zur&#252;ck zu Produkten</a>
 
 				<!-- Main Layout -->
-					<div id="datasheet-layout">
+					<div id="datasheet-layout" class="flex flex-col md:flex-row gap-10 max-w-screen-2xl mx-auto px-8 py-12 items-start">
 
 						<!-- Left: Image Gallery + Caption -->
-						<div id="left-column">
+						<div id="left-column" class="flex flex-col gap-5 items-center w-full md:flex-1">
 
 							<!-- Hero image -->
-							<div class="gallery-main">
-								<img id="gallery-hero" src="../images/data01.jpg" alt="Hauptansicht" />
+							<div class="gallery-main w-full md:w-1/2 flex items-center justify-center overflow-hidden">
+								<img id="gallery-hero" src="../images/data01.jpg" alt="Hauptansicht" class="max-w-full h-auto object-contain block transition-opacity duration-300" />
 							</div>
 
 							<!-- 3 clickable thumbnails -->
-							<div class="gallery-thumbs">
-								<div class="thumb active" data-src="../images/data01.jpg">
-									<img src="../images/data01.jpg" alt="Ansicht 1" />
+							<div class="gallery-thumbs flex gap-2 w-full md:w-1/2">
+								<div class="thumb active flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/data01.jpg">
+									<img src="../images/data01.jpg" alt="Ansicht 1" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
-								<div class="thumb" data-src="../images/data02.jpg">
-									<img src="../images/data02.jpg" alt="Ansicht 2" />
+								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/data02.jpg">
+									<img src="../images/data02.jpg" alt="Ansicht 2" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
-								<div class="thumb" data-src="../images/data03.jpg">
-									<img src="../images/data03.jpg" alt="Ansicht 3" />
+								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/data03.jpg">
+									<img src="../images/data03.jpg" alt="Ansicht 3" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 							</div>
 
 							<!-- Caption -->
-							<div class="gallery-caption">
-								<h4>&#220;ber dieses Produkt</h4>
-								<p>Der BSW 250 ist ein leistungsstarker Moving Head, der Beam, Spot und Wash in einem kompakten Ger&#228;t vereint. CMY-Farbmischung, motorisierter 3&deg;&ndash;35&deg;-Zoom, zwei Prismen, 10 statische und 7 rotierende Gobos sowie Linear-Frost geben Ihnen maximale kreative Freiheit &mdash; vom gestochen scharfen Beam bis zum weichen, gleichm&#228;ssigen Wash. 540&deg;/270&deg; Pan/Tilt mit 16-Bit-Aufl&#246;sung sorgen f&#252;r pr&#228;zise, fl&#252;ssige Bewegungen. Hell. Flexibel. Zuverl&#228;ssig. Gebaut f&#252;r B&#252;hnen, Clubs, Touring und Events, bei denen Leistung keine Kompromisse kennt.</p>
+							<div class="gallery-caption bg-zinc-900 border border-zinc-800 rounded p-5 text-gray-400 text-sm leading-relaxed w-full mt-auto">
+								<h4 class="text-white mb-2 text-sm font-bold tracking-wider uppercase">&#220;ber dieses Produkt</h4>
+								<p class="m-0">Der BSW 250 ist ein leistungsstarker Moving Head, der Beam, Spot und Wash in einem kompakten Ger&#228;t vereint. CMY-Farbmischung, motorisierter 3&deg;&ndash;35&deg;-Zoom, zwei Prismen, 10 statische und 7 rotierende Gobos sowie Linear-Frost geben Ihnen maximale kreative Freiheit &mdash; vom gestochen scharfen Beam bis zum weichen, gleichm&#228;ssigen Wash. 540&deg;/270&deg; Pan/Tilt mit 16-Bit-Aufl&#246;sung sorgen f&#252;r pr&#228;zise, fl&#252;ssige Bewegungen. Hell. Flexibel. Zuverl&#228;ssig. Gebaut f&#252;r B&#252;hnen, Clubs, Touring und Events, bei denen Leistung keine Kompromisse kennt.</p>
 							</div>
 
 						</div>
 
 						<!-- Right: Data Table -->
-						<div id="right-column">
-							<div class="datasheet-table-wrapper">
-								<h3>Spezifikationen</h3>
-								<table class="datasheet-table">
+						<div id="right-column" class="flex flex-col w-full md:flex-1">
+							<div class="datasheet-table-wrapper bg-gray-300 rounded-md p-6 text-zinc-900 overflow-x-auto">
+								<h3 class="mb-4 text-sm font-bold uppercase tracking-widest text-zinc-700 border-b-2 border-gray-400 pb-2">Spezifikationen</h3>
+								<table class="datasheet-table w-full border-collapse text-sm">
 									<thead>
 										<tr>
-											<th>Parameter</th>
-											<th>Wert</th>
+											<th class="bg-gray-400 text-zinc-900 text-left px-4 py-2 font-bold uppercase text-xs tracking-wider">Parameter</th>
+											<th class="bg-gray-400 text-zinc-900 text-left px-4 py-2 font-bold uppercase text-xs tracking-wider">Wert</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr><td>Produkttyp</td><td>LED Beam Spot Wash Moving Head</td></tr>
-										<tr><td>Lichtquelle</td><td>1 &times; 250W hochleistungs-weisse LED</td></tr>
-										<tr><td>Farbtemperatur</td><td>7.000 K</td></tr>
-										<tr><td>Abstrahlwinkel</td><td>3&deg; &ndash; 35&deg; motorisierter Zoom</td></tr>
-										<tr><td>Betriebsmodi</td><td>Beam, Spot, Wash</td></tr>
-										<tr><td>Pan / Tilt</td><td>540&deg; / 270&deg; (16-Bit-Aufl&#246;sung)</td></tr>
-										<tr><td>Farbrad</td><td>8 Farben + offen</td></tr>
-										<tr><td>Farbmischung</td><td>CMY-Farbmischung</td></tr>
-										<tr><td>Gobos</td><td>10 statisch + 7 rotierend + offen</td></tr>
-										<tr><td>Prisma</td><td>8-facettiges &amp; 16-facettiges rotierendes Prisma</td></tr>
-										<tr><td>Dimmer</td><td>0 &ndash; 100% elektronisches Dimmen</td></tr>
-										<tr><td>Stroboskop</td><td>1 &ndash; 25 Hz</td></tr>
-										<tr><td>Steuerprotokolle</td><td>DMX512, RDM</td></tr>
-										<tr><td>DMX-Kan&#228;le</td><td>18 / 22 / 26 CH</td></tr>
-										<tr><td>Eingangsspannung</td><td>AC 100 &ndash; 240 V, 50/60 Hz</td></tr>
-										<tr><td>Leistungsaufnahme</td><td>350 W max.</td></tr>
-										<tr><td>Anschl&#252;sse</td><td>PowerCON Ein/Aus, 3-Pin XLR Ein/Aus</td></tr>
-										<tr><td>Abmessungen</td><td>360 &times; 260 &times; 500 mm</td></tr>
-										<tr><td>Nettogewicht</td><td>12,5 kg</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Produkttyp</td><td class="px-4 py-2 text-zinc-800">LED Beam Spot Wash Moving Head</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Lichtquelle</td><td class="px-4 py-2 text-zinc-800">1 &times; 250W hochleistungs-weisse LED</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Farbtemperatur</td><td class="px-4 py-2 text-zinc-800">7.000 K</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Abstrahlwinkel</td><td class="px-4 py-2 text-zinc-800">3&deg; &ndash; 35&deg; motorisierter Zoom</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Betriebsmodi</td><td class="px-4 py-2 text-zinc-800">Beam, Spot, Wash</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Pan / Tilt</td><td class="px-4 py-2 text-zinc-800">540&deg; / 270&deg; (16-Bit-Aufl&#246;sung)</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Farbrad</td><td class="px-4 py-2 text-zinc-800">8 Farben + offen</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Farbmischung</td><td class="px-4 py-2 text-zinc-800">CMY-Farbmischung</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Gobos</td><td class="px-4 py-2 text-zinc-800">10 statisch + 7 rotierend + offen</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Prisma</td><td class="px-4 py-2 text-zinc-800">8-facettiges &amp; 16-facettiges rotierendes Prisma</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Dimmer</td><td class="px-4 py-2 text-zinc-800">0 &ndash; 100% elektronisches Dimmen</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Stroboskop</td><td class="px-4 py-2 text-zinc-800">1 &ndash; 25 Hz</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Steuerprotokolle</td><td class="px-4 py-2 text-zinc-800">DMX512, RDM</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">DMX-Kan&#228;le</td><td class="px-4 py-2 text-zinc-800">18 / 22 / 26 CH</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Eingangsspannung</td><td class="px-4 py-2 text-zinc-800">AC 100 &ndash; 240 V, 50/60 Hz</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Leistungsaufnahme</td><td class="px-4 py-2 text-zinc-800">350 W max.</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Anschl&#252;sse</td><td class="px-4 py-2 text-zinc-800">PowerCON Ein/Aus, 3-Pin XLR Ein/Aus</td></tr>
+										<tr class="border-b border-gray-300 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Abmessungen</td><td class="px-4 py-2 text-zinc-800">360 &times; 260 &times; 500 mm</td></tr>
+										<tr class="border-b border-gray-300 last:border-b-0 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">Nettogewicht</td><td class="px-4 py-2 text-zinc-800">12,5 kg</td></tr>
 									</tbody>
 								</table>
 							</div>
