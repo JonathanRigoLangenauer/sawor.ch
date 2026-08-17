@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="de">
 	<head>
-		<title>LED-Beam 60 - Sawor Lighting</title>
+		<title>Sawor CompactBeam - Sawor Lighting</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 		<link rel="alternate" hreflang="en" href="../datasheet.html" />
 		<link rel="alternate" hreflang="de" href="datasheet.html" />
@@ -22,22 +23,67 @@
 			<div id="page-wrapper">
 
 				<!-- Page Title -->
-					<h2 id="datasheet-title" class="w-full pt-8 px-8 pb-0 text-white text-2xl font-bold tracking-wide text-center">Der Sawor CompactBeam</h2>
-					<a id="back-link" href="index.html" class="block text-center pt-3 px-8 text-gray-400 text-sm no-underline tracking-wide hover:text-white">&larr; Zur&#252;ck zu Produkten</a>
+					<h2 id="datasheet-title" class="w-full pt-4 pl-8 pr-24 md:px-8 pb-0 text-white text-xl md:text-2xl font-bold tracking-wide text-center">Der Sawor CompactBeam</h2>
+					<a id="back-link" href="index.html" class="block text-center pt-1 pb-1 px-8 text-gray-400 text-sm no-underline tracking-wide hover:text-white">&larr; Zur&#252;ck zu Produkten</a>
 
-				<!-- Main Layout -->
-					<div id="datasheet-layout" class="flex flex-col md:flex-row gap-10 max-w-screen-2xl mx-auto px-8 py-12 items-start">
+				<!-- Top: Image Gallery + Buy Box -->
+					<div id="top-section" class="flex flex-col md:flex-row gap-6 md:gap-8 max-w-screen-2xl mx-auto px-8 pt-4 pb-8 items-stretch">
 
-						<!-- Left: Image Gallery + Caption -->
-						<div id="left-column" class="flex flex-col gap-5 items-center w-full md:flex-1">
+						<!-- Buy Box (Mobil: zuerst, Desktop: rechts) -->
+						<div id="buybox-column" class="order-1 md:order-2 flex flex-col w-full md:flex-1">
+							<div class="buybox bg-black border border-zinc-800 rounded-md p-6 md:p-10 text-white flex flex-col gap-6 md:gap-8 h-full justify-between">
 
-							<!-- Hero image -->
-							<div class="gallery-main w-full md:w-1/2 flex items-center justify-center overflow-hidden">
-								<img id="gallery-hero" src="../images/120w1.jpg" alt="Hauptansicht" class="max-w-full h-auto object-contain block transition-opacity duration-300" />
+								<div class="flex flex-col gap-3">
+									<div class="flex items-end gap-2">
+										<span class="text-5xl font-extrabold leading-none text-white">200</span>
+										<span class="text-lg font-bold uppercase tracking-wide text-white pb-1">CHF</span>
+									</div>
+
+									<div class="flex flex-wrap gap-x-6 gap-y-2 text-sm uppercase tracking-wide text-white border-y border-zinc-800 py-3">
+										<span class="flex items-center gap-2"><i class="fas fa-shipping-fast text-gray-300"></i>Kostenloser Versand</span>
+										<span class="flex items-center gap-2"><i class="fas fa-clock text-gray-300"></i>Lieferzeit 2&ndash;3 Tage</span>
+									</div>
+								</div>
+
+								<div class="flex flex-col gap-1">
+									<div class="text-lg md:text-xl font-bold text-gray-300">Kompakt &amp; energieeffizientes Design</div>
+									<div class="text-lg md:text-xl font-bold text-gray-300">2.200.000 cd</div>
+									<div class="text-lg md:text-xl font-bold text-gray-300">60 W LED</div>
+									<div class="text-lg md:text-xl font-bold text-gray-300">2&deg; Abstrahlwinkel</div>
+									<div class="text-lg md:text-xl font-bold text-gray-300">7 Farben</div>
+									<div class="text-lg md:text-xl font-bold text-gray-300">DMX</div>
+								</div>
+
+								<div class="flex flex-col gap-3">
+									<p class="text-base text-gray-300 m-0">Lieferumfang: Netzkabel und Montagewinkel.</p>
+
+									<div class="flex items-center gap-4">
+										<span class="text-sm font-bold uppercase tracking-wide text-gray-300">Menge</span>
+										<div class="flex items-center border border-zinc-700 rounded overflow-hidden">
+											<button type="button" id="qty-minus" class="w-8 h-9 flex items-center justify-center text-gray-300 hover:bg-zinc-800">&minus;</button>
+											<input id="qty-input" type="number" min="1" value="1" class="w-12 text-center border-x border-zinc-700 h-9 text-white bg-zinc-900 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+											<button type="button" id="qty-plus" class="w-8 h-9 flex items-center justify-center text-gray-300 hover:bg-zinc-800">+</button>
+										</div>
+									</div>
+
+									<a id="buy-link" href="mailto:info@sawor.ch?subject=Bestellanfrage%20%E2%80%93%20Sawor%20CompactBeam&body=Ich%20m%C3%B6chte%201x%20Sawor%20CompactBeam%20bestellen." class="w-full text-center bg-white text-black py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+										<i class="fas fa-shopping-cart"></i> Kaufen
+									</a>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- Bildergalerie (Mobil: zweitens, Desktop: links) -->
+						<div id="gallery-column" class="order-2 md:order-1 flex flex-col gap-3 items-center justify-center w-full md:flex-1">
+
+							<!-- Hauptbild -->
+							<div class="gallery-main w-full md:w-4/5 flex items-center justify-center overflow-hidden">
+								<img id="gallery-hero" src="../images/120w1.jpg" alt="Hauptansicht" class="max-w-full h-auto max-h-[38vh] object-contain block transition-opacity duration-300" />
 							</div>
 
-							<!-- 3 clickable thumbnails -->
-							<div class="gallery-thumbs flex gap-2 w-full md:w-1/2">
+							<!-- 3 anklickbare Thumbnails -->
+							<div class="gallery-thumbs flex gap-2 w-full md:w-4/5">
 								<div class="thumb active flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/120w1.jpg">
 									<img src="../images/120w1.jpg" alt="Ansicht 1" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
@@ -49,16 +95,50 @@
 								</div>
 							</div>
 
-							<!-- Caption -->
-							<div class="gallery-caption bg-zinc-900 border border-zinc-800 rounded p-5 text-gray-400 text-sm leading-relaxed w-full mt-auto">
-								<h4 class="text-white mb-2 text-sm font-bold tracking-wider uppercase">&#220;ber dieses Produkt</h4>
-								<p class="m-0">Der Sawor CompactBeam liefert mehr als sein Format vermuten l&#228;sst. Mit nur 60 W erreicht er eine Spitzenintensit&#228;t von 2.200.000 cd &mdash; vergleichbar mit branchenüblichen 180-Watt-Strahlern, bei einem Drittel des Stromverbrauchs. Das kompakte Geh&#228;use und das geringe Gewicht erm&#246;glichen den Einsatz überall &mdash; vom Touring-Case bis zur festen Traverseninstallation. Der 2&deg;-Strahl, je 7+1 Farb- und Gobo-R&#228;der sowie ein 18-facettiges rotierendes Prisma bieten das komplette Werkzeug f&#252;r Lufteffekte und ausdrucksstarke B&#252;hnenbilder. Sanftes Dimmen, Stroboskop und pr&#228;zises Pan/Tilt erm&#246;glichen volle kreative Kontrolle &#252;ber DMX512. Leicht und robust &mdash; gleichermassen zuhause auf einer Traverse wie auf einem Touring-Rig. Lieferumfang: Netzkabel und Montagewinkel.</p>
+						</div>
+
+					</div>
+
+				<!-- Video -->
+					<section id="video-section" class="max-w-screen-2xl mx-auto px-8 py-34 md:py-60">
+<!-- Für wen ist das geeignet -->
+					<section id="who-for-section" class="max-w-2xl mx-auto px-8 pb-16 md:pb-24 text-center">
+						<h3 class="text-white text-2xl font-bold uppercase tracking-widest mb-4 border-b border-zinc-800 inline-block pb-2">F&#252;r wen ist das geeignet</h3>
+						<p class="text-gray-400 text-lg leading-relaxed">Eine ausgezeichnete Wahl f&#252;r kleine Clubs und Touren mit knappem Budget.</p>
+					</section>
+
+						<div class="max-w-6xl mx-auto rounded-lg overflow-hidden shadow-lg">
+							<video id="promo-video" muted loop playsinline preload="metadata" class="w-full h-auto block">
+								<source src="../images/Sawor_CompactBeam_vid.mov" type="video/mp4" />
+							</video>
+						</div>
+					</section>
+
+				<!-- Unten: Über das Produkt + Bewertungen / Datenblatt -->
+					<div id="bottom-section" class="flex flex-col md:flex-row gap-10 max-w-screen-2xl mx-auto px-8 pb-16 md:pb-24 items-start">
+
+						<!-- Über das Produkt + Bewertungen (Mobil: zweitens, Desktop: links) -->
+						<div id="about-column" class="order-2 md:order-1 flex flex-col gap-8 w-full md:flex-1">
+
+							<div class="about-block bg-zinc-900 border border-zinc-800 rounded p-6 text-gray-400 text-sm leading-relaxed">
+								<h4 class="text-white mb-3 text-base font-bold tracking-wider uppercase">&#220;ber dieses Produkt</h4>
+								<p class="m-0 text-base">Der Sawor CompactBeam liefert mehr als sein Format vermuten l&#228;sst. Mit nur 60 W erreicht er eine Spitzenintensit&#228;t von 2.200.000 cd &mdash; vergleichbar mit branchenüblichen 180-Watt-Strahlern, bei einem Drittel des Stromverbrauchs. Das kompakte Geh&#228;use und das geringe Gewicht erm&#246;glichen den Einsatz überall &mdash; vom Touring-Case bis zur festen Traverseninstallation. Der 2&deg;-Strahl, je 7+1 Farb- und Gobo-R&#228;der sowie ein 18-facettiges rotierendes Prisma bieten das komplette Werkzeug f&#252;r Lufteffekte und ausdrucksstarke B&#252;hnenbilder. Sanftes Dimmen, Stroboskop und pr&#228;zises Pan/Tilt erm&#246;glichen volle kreative Kontrolle &#252;ber DMX512. Leicht und robust &mdash; gleichermassen zuhause auf einer Traverse wie auf einem Touring-Rig. Lieferumfang: Netzkabel und Montagewinkel.</p>
+							</div>
+
+							<div id="reviews-block">
+								<h4 class="text-white mb-3 text-sm font-bold tracking-wider uppercase">Bewertungen</h4>
+								<div class="flex flex-col gap-3">
+									<div class="review-box bg-zinc-900 border border-zinc-800 rounded p-4">
+										<div class="stars text-amber-400 text-sm mb-2 tracking-wider">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+										<p class="text-gray-400 text-sm m-0">Aktuell gibt es noch keine Bewertungen. Schreiben Sie uns, damit wir eine hinzuf&#252;gen k&#246;nnen ;)</p>
+									</div>
+								</div>
 							</div>
 
 						</div>
 
-						<!-- Right: Data Table -->
-						<div id="right-column" class="flex flex-col w-full md:flex-1">
+						<!-- Datenblatt (Mobil: zuerst, Desktop: rechts) -->
+						<div id="datasheet-column" class="order-1 md:order-2 flex flex-col w-full md:flex-1">
 							<div class="datasheet-table-wrapper bg-gray-300 rounded-md p-6 text-zinc-900 overflow-x-auto">
 								<h3 class="mb-4 text-sm font-bold uppercase tracking-widest text-zinc-700 border-b-2 border-gray-400 pb-2">Spezifikationen</h3>
 								<table class="datasheet-table w-full border-collapse text-sm">
@@ -102,9 +182,12 @@
 										<tr class="border-b border-gray-300 last:border-b-0 even:bg-zinc-200 odd:bg-gray-300"><td class="px-4 py-2 text-zinc-800">DMX-Ausgang</td><td class="px-4 py-2 text-zinc-800">3-Pin XLR</td></tr>
 									</tbody>
 								</table>
-								<div class="mt-5 text-right">
+								<div class="mt-5 flex flex-col items-end gap-2">
 									<a href="../manual.html?lang=de" class="inline-block bg-zinc-600 text-white px-5 py-2 rounded text-xs tracking-wider uppercase no-underline border border-zinc-500 hover:bg-zinc-500">
 										Bedienungsanleitung
+									</a>
+									<a href="mailto:info@sawor.ch?subject=Ersatzteilanfrage%20%E2%80%93%20Sawor%20CompactBeam" class="inline-block bg-zinc-600 text-white px-5 py-2 rounded text-xs tracking-wider uppercase no-underline border border-zinc-500 hover:bg-zinc-500">
+										Ersatzteile
 									</a>
 								</div>
 							</div>
@@ -136,6 +219,49 @@
 							thumbs.forEach(function(t) { t.classList.remove('active'); });
 							this.classList.add('active');
 						}.bind(thumb));
+					});
+				})();
+
+				(function() {
+					var video = document.getElementById('promo-video');
+					if (!video || !('IntersectionObserver' in window)) return;
+					var observer = new IntersectionObserver(function(entries) {
+						entries.forEach(function(entry) {
+							if (entry.isIntersecting) {
+								video.play().catch(function() {});
+							} else {
+								video.pause();
+							}
+						});
+					}, { threshold: 0.4 });
+					observer.observe(video);
+				})();
+
+				(function() {
+					var input = document.getElementById('qty-input');
+					var minus = document.getElementById('qty-minus');
+					var plus = document.getElementById('qty-plus');
+					var buyLink = document.getElementById('buy-link');
+
+					function updateBuyLink() {
+						var qty = parseInt(input.value, 10) || 1;
+						buyLink.href = 'mailto:info@sawor.ch?subject=Bestellanfrage%20%E2%80%93%20Sawor%20CompactBeam&body=Ich%20m%C3%B6chte%20' + qty + 'x%20Sawor%20CompactBeam%20bestellen.';
+					}
+
+					minus.addEventListener('click', function() {
+						var val = parseInt(input.value, 10) || 1;
+						input.value = Math.max(1, val - 1);
+						updateBuyLink();
+					});
+					plus.addEventListener('click', function() {
+						var val = parseInt(input.value, 10) || 1;
+						input.value = val + 1;
+						updateBuyLink();
+					});
+					input.addEventListener('change', function() {
+						var val = parseInt(input.value, 10) || 1;
+						input.value = Math.max(1, val);
+						updateBuyLink();
 					});
 				})();
 			</script>
