@@ -1,6 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-42M3ML12V1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-42M3ML12V1');
+		</script>
 		<title>Sawor CompactBeam - Sawor Lighting</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
@@ -58,16 +67,9 @@
 								<div class="flex flex-col gap-3">
 									<p class="text-base text-gray-300 m-0">Supplied with power cable and mounting brackets.</p>
 
-									<div class="flex items-center gap-4">
-										<span class="text-sm font-bold uppercase tracking-wide text-gray-300">Quantity</span>
-										<div class="flex items-center border border-zinc-700 rounded overflow-hidden">
-											<button type="button" id="qty-minus" class="w-8 h-9 flex items-center justify-center text-gray-300 hover:bg-zinc-800">&minus;</button>
-											<input id="qty-input" type="number" min="1" value="1" class="w-12 text-center border-x border-zinc-700 h-9 text-white bg-zinc-900 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
-											<button type="button" id="qty-plus" class="w-8 h-9 flex items-center justify-center text-gray-300 hover:bg-zinc-800">+</button>
-										</div>
-									</div>
+						
 
-									<a id="buy-link"  class="w-full text-center bg-white text-black py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+									<a id="buy-link" href="" class="w-full text-center bg-white text-black py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
 										<i class="fas fa-shopping-cart"></i> Buy ( Coming soon )
 									</a>
 								</div>
