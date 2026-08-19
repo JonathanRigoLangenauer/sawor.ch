@@ -21,13 +21,35 @@
 		<meta name="description" content="Sawor Lighting bietet professionelle LED-Bühnenscheinwerfer, darunter Moving Heads und COB-PARs, für Live-Events, Clubs und Installationen." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-		<link rel="alternate" hreflang="en" href="../index.html" />
-		<link rel="alternate" hreflang="de" href="index.html" />
-		<link rel="alternate" hreflang="x-default" href="../index.html" />
+		<link rel="alternate" hreflang="en" href="https://sawor.ch/index.html" />
+		<link rel="alternate" hreflang="de" href="https://sawor.ch/de/index.html" />
+		<link rel="alternate" hreflang="x-default" href="https://sawor.ch/index.html" />
+		<link rel="canonical" href="https://sawor.ch/de/index.html" />
 		<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
 		<link rel="manifest" href="../images/site.webmanifest">
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Sawor Lighting — Professionelle LED-Bühnentechnik" />
+		<meta property="og:description" content="Sawor Lighting bietet professionelle LED-Bühnenscheinwerfer, darunter Moving Heads und COB-PARs, für Live-Events, Clubs und Installationen." />
+		<meta property="og:url" content="https://sawor.ch/de/index.html" />
+		<meta property="og:image" content="https://sawor.ch/images/120Wroung.jpg" />
+		<meta property="og:locale" content="de_CH" />
+		<meta property="og:locale:alternate" content="en_US" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Sawor Lighting — Professionelle LED-Bühnentechnik" />
+		<meta name="twitter:description" content="Sawor Lighting bietet professionelle LED-Bühnenscheinwerfer, darunter Moving Heads und COB-PARs, für Live-Events, Clubs und Installationen." />
+		<meta name="twitter:image" content="https://sawor.ch/images/120Wroung.jpg" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Sawor Lighting",
+			"url": "https://sawor.ch/",
+			"logo": "https://sawor.ch/images/favicon-32x32.png",
+			"sameAs": []
+		}
+		</script>
 		<style>
 			#lang-switcher {
 				position: fixed;
@@ -93,9 +115,64 @@
 				z-index: 1;
 				padding: 4em 0;
 			}
+
+			.coming-soon-tag {
+				display: inline-block;
+				font-size: 0.4em;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				background: #d3d3d3;
+				color: #333;
+				padding: 0.3em 0.6em;
+				border-radius: 4px;
+				vertical-align: middle;
+				margin-left: 0.5em;
+			}
+
+			#page-loader {
+				position: fixed;
+				inset: 0;
+				z-index: 100000;
+				background: #000;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: opacity 0.5s ease;
+			}
+
+			#page-loader img {
+				width: 88px;
+				height: 88px;
+				animation: page-loader-pulse 1.4s ease-in-out infinite;
+			}
+
+			#page-loader.is-hidden {
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			@keyframes page-loader-pulse {
+				0%, 100% { opacity: 0.4; transform: scale(0.92); }
+				50% { opacity: 1; transform: scale(1); }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
+
+		<!-- Page Loader -->
+		<div id="page-loader">
+			<img src="../images/apple-touch-icon.png" alt="Sawor Lighting" />
+		</div>
+		<noscript><style>#page-loader { display: none; }</style></noscript>
+		<script>
+			window.addEventListener('load', function () {
+				var loader = document.getElementById('page-loader');
+				if (!loader) return;
+				loader.classList.add('is-hidden');
+				setTimeout(function () { loader.remove(); }, 500);
+			});
+		</script>
 
 		<!-- Language Switcher -->
 		<div id="lang-switcher">
@@ -123,7 +200,7 @@
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
 								<div class="inner">
-									<a href="#" class="image"><img src="../images/120Wroung.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="../images/120Wroung.jpg" alt="Sawor CompactBeam LED-Moving-Head" /></a>
 									<div class="content">
 										<h2 class="major">Der Sawor CompactBeam</h2>
 										<p>Der Sawor CompactBeam liefert die Lichtleistung eines branchenüblichen 180-Watt-Moving-Heads &mdash; bei nur 60 Watt. Sein gestochen scharfer 2&deg;-Strahl, das lebendige Farbrad und das 18-facettige Prisma erzeugen eindrucksvolle Lufteffekte und ausdrucksstarke Bühnenbilder, während das kompakte Format und die geringe Leistungsaufnahme ihn zur intelligenten Wahl für Touring, Clubs und Festinstallationen machen.</p>
@@ -135,9 +212,9 @@
 						<!-- Two -->
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="../images/250Wmain_roun.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="../images/250Wmain_roun.jpg" alt="Sawor LED-BSW 250 Beam- und Wash-Moving-Head" /></a>
 									<div class="content">
-										<h2 class="major">Sawor LED-BSW</h2>
+										<h2 class="major">Sawor LED-BSW <span class="coming-soon-tag">Demnächst</span></h2>
 										<p>Leistungsstark, vielseitig und für anspruchsvolle Produktionen konzipiert. Der BSW 250 vereint gestochen scharfe Beam-Effekte, dynamische Gobo-Projektionen und gleichmässige Flächenausleuchtung in einem kompakten Gerät. Mit motorisiertem Zoom, rotierenden Gobos, zwei Prismen und brillanter Farbmischung liefert er professionelle Leistung für Bühnen, Clubs, Live-Events und Festinstallationen.</p>
 										<a href="datasheet-bsw250.html" class="special">Mehr erfahren</a>
 									</div>
@@ -147,9 +224,9 @@
 						<!-- Three -->
 							<section id="three" class="wrapper spotlight style3">
 								<div class="inner">
-									<a href="#" class="image"><img src="../images/200wround.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="../images/200wround.jpg" alt="Sawor COB-Par LED-Scheinwerfer mit einstellbarer Weisslichttemperatur" /></a>
 									<div class="content">
-										<h2 class="major">Sawor COB-Par</h2>
+										<h2 class="major"><span class="coming-soon-tag">Demnächst</span> Sawor COB-Par</h2>
 										<p>Der COB-Par ist für den professionellen Einsatz auf Bühnen und Events ausgelegt. Er liefert ein kraftvolles, gleichmässiges Wash mit hervorragender Farbkonsistenz und sanftem Dimmverhalten. Dank einstellbarer Weisslicht-Farbtemperatur &mdash; von warm bis kalt &mdash; ist er ideal für Konzerte, Theater, Gotteshäuser und Festinstallationen.</p>
 										<a href="datasheet-cob200.html" class="special">Mehr erfahren</a>
 									</div>
@@ -163,22 +240,22 @@
 									<p></p>
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="../images/reliability.png" alt="" /></a>
+											<a href="#" class="image"><img src="../images/reliability.png" alt="Symbol für Zuverlässigkeit" /></a>
 											<h3 class="major">Zuverlässigkeit</h3>
 											<p>Jedes Produkt durchläuft vor der Markteinführung ausgiebige Tests unter realen Bedingungen, damit Sie sich im Einsatz darauf verlassen können.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../images/Quality_testing.png" alt="" /></a>
+											<a href="#" class="image"><img src="../images/Quality_testing.png" alt="Symbol für Qualitätsprüfung" /></a>
 											<h3 class="major">Präzision</h3>
 											<p>Jedes Produkt, das unseren Namen trägt, unterliegt strengen Qualitätsstandards, denn was wir verkaufen, sagt etwas darüber aus, wer wir sind.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../images/value.png" alt="" /></a>
+											<a href="#" class="image"><img src="../images/value.png" alt="Symbol für Wertigkeit" /></a>
 											<h3 class="major">Wert</h3>
 											<p>Unser Ziel ist es, professionelles Equipment zu einem Preis anzubieten, der höchste Qualität für jeden erschwinglich macht.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../images/savety.png" alt="" /></a>
+											<a href="#" class="image"><img src="../images/savety.png" alt="Symbol für Sicherheit" /></a>
 											<h3 class="major">Sicherheit</h3>
 											<p>Leistungsstarke Geräte erfordern Verantwortung. Sicherheit ist ein Grundprinzip bei jeder unserer Entscheidungen, vom Design bis zur Auslieferung. Denn das ist der einzige Standard, den wir akzeptieren.</p>
 										</article>

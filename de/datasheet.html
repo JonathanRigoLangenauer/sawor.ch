@@ -13,15 +13,81 @@
 		<title>Sawor CompactBeam - Sawor Lighting</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<meta name="description" content="Sawor CompactBeam: ein kompakter 60-Watt-LED-Moving-Head mit der Lichtleistung eines 180-Watt-Geräts, gestochen scharfem 2°-Strahl, Farbrad und 18-facettigem Prisma. 212 CHF." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-		<link rel="alternate" hreflang="en" href="../datasheet.html" />
-		<link rel="alternate" hreflang="de" href="datasheet.html" />
+		<link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet.html" />
+		<link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet.html" />
+		<link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet.html" />
+		<link rel="canonical" href="https://sawor.ch/de/datasheet.html" />
+		<meta property="og:type" content="product" />
+		<meta property="og:title" content="Sawor CompactBeam - Sawor Lighting" />
+		<meta property="og:description" content="Sawor CompactBeam: ein kompakter 60-Watt-LED-Moving-Head mit der Lichtleistung eines 180-Watt-Geräts, gestochen scharfem 2°-Strahl, Farbrad und 18-facettigem Prisma." />
+		<meta property="og:url" content="https://sawor.ch/de/datasheet.html" />
+		<meta property="og:image" content="https://sawor.ch/images/120w1.jpg" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Product",
+			"name": "Sawor CompactBeam",
+			"image": "https://sawor.ch/images/120w1.jpg",
+			"description": "Ein kompakter 60-Watt-LED-Moving-Head mit der Lichtleistung eines 180-Watt-Geräts, gestochen scharfem 2°-Strahl, Farbrad und 18-facettigem Prisma.",
+			"brand": { "@type": "Brand", "name": "Sawor" },
+			"offers": {
+				"@type": "Offer",
+				"url": "https://sawor.ch/de/datasheet.html",
+				"priceCurrency": "CHF",
+				"price": "212",
+				"availability": "https://schema.org/InStock"
+			}
+		}
+		</script>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>tailwind.config = { important: true }</script>
+		<style>
+			#page-loader {
+				position: fixed;
+				inset: 0;
+				z-index: 100000;
+				background: #000;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: opacity 0.5s ease;
+			}
+
+			#page-loader img {
+				width: 88px;
+				height: 88px;
+				animation: page-loader-pulse 1.4s ease-in-out infinite;
+			}
+
+			#page-loader.is-hidden {
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			@keyframes page-loader-pulse {
+				0%, 100% { opacity: 0.4; transform: scale(0.92); }
+				50% { opacity: 1; transform: scale(1); }
+			}
+		</style>
 	</head>
 	<body class="is-preload datasheet-page bg-black text-gray-300">
+
+		<div id="page-loader">
+			<img src="../images/apple-touch-icon.png" alt="Sawor Lighting" />
+		</div>
+		<noscript><style>#page-loader { display: none; }</style></noscript>
+		<script>
+			window.addEventListener('load', function () {
+				var loader = document.getElementById('page-loader');
+				if (!loader) return;
+				loader.classList.add('is-hidden');
+				setTimeout(function () { loader.remove(); }, 500);
+			});
+		</script>
 
 		<div id="lang-switcher" class="fixed top-4 right-6 z-50 flex gap-1.5">
 			<a href="../datasheet.html" class="bg-black/50 border border-white/20 text-white px-3 py-1 text-xs tracking-widest no-underline rounded uppercase transition-colors hover:bg-white/15 [&.active]:bg-white/10 [&.active]:border-white/50">EN</a>
@@ -44,7 +110,7 @@
 
 								<div class="flex flex-col gap-3">
 									<div class="flex items-end gap-2">
-										<span class="text-5xl font-extrabold leading-none text-white">200</span>
+										<span class="text-5xl font-extrabold leading-none text-white">212</span>
 										<span class="text-lg font-bold uppercase tracking-wide text-white pb-1">CHF</span>
 									</div>
 
@@ -66,14 +132,7 @@
 								<div class="flex flex-col gap-3">
 									<p class="text-base text-gray-300 m-0">Lieferumfang: Netzkabel und Montagewinkel.</p>
 
-									<div class="flex items-center gap-4">
-										<span class="text-sm font-bold uppercase tracking-wide text-gray-300">Menge</span>
-										<div class="flex items-center border border-zinc-700 rounded overflow-hidden">
-											<button type="button" id="qty-minus" class="w-8 h-9 flex items-center justify-center text-gray-300 hover:bg-zinc-800">&minus;</button>
-											<input id="qty-input" type="number" min="1" value="1" class="w-12 text-center border-x border-zinc-700 h-9 text-white bg-zinc-900 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
-											<button type="button" id="qty-plus" class="w-8 h-9 flex items-center justify-center text-gray-300 hover:bg-zinc-800">+</button>
-										</div>
-									</div>
+							
 
 									<a id="buy-link" href="" class="w-full text-center bg-white text-black py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
 										<i class="fas fa-shopping-cart"></i> Kaufen ( Kommt Bald )
@@ -94,13 +153,13 @@
 							<!-- 3 anklickbare Thumbnails -->
 							<div class="gallery-thumbs flex gap-2 w-full md:w-4/5">
 								<div class="thumb active flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/120w1.jpg">
-									<img src="../images/120w1.jpg" alt="Ansicht 1" class="max-w-full h-auto object-contain block pointer-events-none" />
+									<img src="../images/120w1.jpg" alt="Sawor CompactBeam LED-Moving-Head, Frontansicht" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/120w2.jpg">
-									<img src="../images/120w2.jpg" alt="Ansicht 2" class="max-w-full h-auto object-contain block pointer-events-none" />
+									<img src="../images/120w2.jpg" alt="Sawor CompactBeam LED-Moving-Head, Seitenansicht" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/120W3.jpg">
-									<img src="../images/120W3.jpg" alt="Ansicht 3" class="max-w-full h-auto object-contain block pointer-events-none" />
+									<img src="../images/120W3.jpg" alt="Sawor CompactBeam LED-Moving-Head, Beam-Effekt im Einsatz" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 							</div>
 

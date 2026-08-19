@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>https://sawor.ch/</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/index.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/index.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/index.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/datasheet.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/datasheet-bsw250.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet-bsw250.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet-bsw250.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet-bsw250.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/datasheet-cob200.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet-cob200.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet-cob200.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet-cob200.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/de/index.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/index.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/index.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/index.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/de/datasheet.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/de/datasheet-bsw250.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet-bsw250.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet-bsw250.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet-bsw250.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/de/datasheet-cob200.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet-cob200.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet-cob200.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet-cob200.html" />
+	</url>
+</urlset>

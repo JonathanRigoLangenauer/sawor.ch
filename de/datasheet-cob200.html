@@ -13,14 +13,73 @@
 		<title>Sawor COB-Par - Sawor Lighting</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<meta name="description" content="Sawor COB-Par: ein professioneller Wash-Scheinwerfer mit einstellbarer Weisslicht-LED-Engine, hervorragender Farbkonsistenz und sanftem Dimmverhalten. Demnächst erhältlich." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-		<link rel="alternate" hreflang="en" href="../datasheet-cob200.html" />
-		<link rel="alternate" hreflang="de" href="datasheet-cob200.html" />
+		<link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet-cob200.html" />
+		<link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet-cob200.html" />
+		<link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet-cob200.html" />
+		<link rel="canonical" href="https://sawor.ch/de/datasheet-cob200.html" />
+		<meta property="og:type" content="product" />
+		<meta property="og:title" content="Sawor COB-Par - Sawor Lighting" />
+		<meta property="og:description" content="Ein professioneller Wash-Scheinwerfer mit einstellbarer Weisslicht-LED-Engine, hervorragender Farbkonsistenz und sanftem Dimmverhalten." />
+		<meta property="og:url" content="https://sawor.ch/de/datasheet-cob200.html" />
+		<meta property="og:image" content="https://sawor.ch/images/200w1.jpg" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Product",
+			"name": "Sawor COB-Par",
+			"image": "https://sawor.ch/images/200w1.jpg",
+			"description": "Ein professioneller Wash-Scheinwerfer mit einstellbarer Weisslicht-LED-Engine, hervorragender Farbkonsistenz und sanftem Dimmverhalten.",
+			"brand": { "@type": "Brand", "name": "Sawor" }
+		}
+		</script>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>tailwind.config = { important: true }</script>
+		<style>
+			#page-loader {
+				position: fixed;
+				inset: 0;
+				z-index: 100000;
+				background: #000;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: opacity 0.5s ease;
+			}
+
+			#page-loader img {
+				width: 88px;
+				height: 88px;
+				animation: page-loader-pulse 1.4s ease-in-out infinite;
+			}
+
+			#page-loader.is-hidden {
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			@keyframes page-loader-pulse {
+				0%, 100% { opacity: 0.4; transform: scale(0.92); }
+				50% { opacity: 1; transform: scale(1); }
+			}
+		</style>
 	</head>
 	<body class="is-preload datasheet-page bg-black text-gray-300">
+
+		<div id="page-loader">
+			<img src="../images/apple-touch-icon.png" alt="Sawor Lighting" />
+		</div>
+		<noscript><style>#page-loader { display: none; }</style></noscript>
+		<script>
+			window.addEventListener('load', function () {
+				var loader = document.getElementById('page-loader');
+				if (!loader) return;
+				loader.classList.add('is-hidden');
+				setTimeout(function () { loader.remove(); }, 500);
+			});
+		</script>
 
 		<div id="lang-switcher" class="fixed top-4 right-6 z-50 flex gap-1.5">
 			<a href="../datasheet-cob200.html" class="bg-black/50 border border-white/20 text-white px-3 py-1 text-xs tracking-widest no-underline rounded uppercase transition-colors hover:bg-white/15 [&.active]:bg-white/10 [&.active]:border-white/50">EN</a>
@@ -48,13 +107,13 @@
 							<!-- 3 clickable thumbnails -->
 							<div class="gallery-thumbs flex gap-2 w-full md:w-1/2">
 								<div class="thumb active flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/200w1.jpg">
-									<img src="../images/200w1.jpg" alt="Ansicht 1" class="max-w-full h-auto object-contain block pointer-events-none" />
+									<img src="../images/200w1.jpg" alt="Sawor COB-Par LED-Scheinwerfer, Frontansicht" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/200W2.jpg">
-									<img src="../images/200W2.jpg" alt="Ansicht 2" class="max-w-full h-auto object-contain block pointer-events-none" />
+									<img src="../images/200W2.jpg" alt="Sawor COB-Par LED-Scheinwerfer, Seitenansicht" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 								<div class="thumb flex-1 aspect-[2/3] overflow-hidden cursor-pointer flex items-center justify-center opacity-60 hover:opacity-75 hover:-translate-y-0.5 transition-all [&.active]:opacity-100" data-src="../images/200w3.jpg">
-									<img src="../images/200w3.jpg" alt="Ansicht 3" class="max-w-full h-auto object-contain block pointer-events-none" />
+									<img src="../images/200w3.jpg" alt="Sawor COB-Par LED-Scheinwerfer im Bühneneinsatz" class="max-w-full h-auto object-contain block pointer-events-none" />
 								</div>
 							</div>
 
