@@ -117,6 +117,13 @@
 									<div class="flex flex-wrap gap-x-6 gap-y-2 text-sm uppercase tracking-wide text-white border-y border-zinc-800 py-3">
 										<span class="flex items-center gap-2"><i class="fas fa-shipping-fast text-gray-300"></i>Free Shipping</span>
 										<span class="flex items-center gap-2"><i class="fas fa-clock text-gray-300"></i>Shipping time 2&ndash;3 days</span>
+										<span class="flex items-center gap-2 relative group">
+											<i class="fas fa-undo text-gray-300"></i>30-Day No-Questions-Asked Returns
+											<i class="fas fa-info-circle text-gray-400 cursor-help" tabindex="0"></i>
+											<span class="pointer-events-none absolute left-0 top-full mt-2 w-64 rounded-md bg-zinc-900 border border-zinc-700 p-3 text-xs normal-case tracking-normal text-gray-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity duration-200 z-10 shadow-lg">
+												Return shipping costs are paid by the buyer. Items must be returned unused, undamaged, and in their original packaging to be eligible for a refund.
+											</span>
+										</span>
 									</div>
 								</div>
 
@@ -135,9 +142,9 @@
 
 						
 
-									<a id="buy-link" href="" class="w-full text-center bg-white text-black py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-										<i class="fas fa-shopping-cart"></i> Buy ( Coming soon )
-									</a>
+									<span id="buy-link" aria-disabled="true" class="w-full text-center bg-zinc-800 text-gray-400 py-3 rounded uppercase tracking-widest font-bold cursor-not-allowed flex items-center justify-center gap-2">
+										<i class="fas fa-shopping-cart"></i> Currently unavailable
+									</span>
 								</div>
 
 							</div>
@@ -185,7 +192,13 @@
 						</div>
 					</section>
 
-				
+				<!-- Repairability / Spare Parts CTA -->
+					<section id="repair-section" class="max-w-2xl mx-auto px-8 pb-16 md:pb-24 text-center">
+						<h3 class="text-white text-2xl font-bold uppercase tracking-widest mb-4 border-b border-zinc-800 inline-block pb-2">Built to Be Repaired</h3>
+						<p class="text-gray-400 text-lg leading-relaxed mb-6">We think every product should be repairable. Every part of the CompactBeam &mdash; down to the belts and bearings &mdash; is available on its own, so a worn part never means replacing the whole fixture.</p>
+						<a href="spareparts.html" class="inline-block bg-white text-black px-6 py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors">Shop Spare Parts</a>
+					</section>
+
 				<!-- Bottom: About + Reviews / Datasheet -->
 					<div id="bottom-section" class="flex flex-col md:flex-row gap-10 max-w-screen-2xl mx-auto px-8 pb-16 md:pb-24 items-start">
 
@@ -261,9 +274,6 @@
 									<a href="manual.html?lang=en" class="inline-block bg-zinc-600 text-white px-5 py-2 rounded text-xs tracking-wider uppercase no-underline border border-zinc-500 hover:bg-zinc-500">
 										User Manual
 									</a>
-									<a href="mailto:info@sawor.ch?subject=Spare%20Parts%20Inquiry%20%E2%80%93%20Sawor%20CompactBeam" class="inline-block bg-zinc-600 text-white px-5 py-2 rounded text-xs tracking-wider uppercase no-underline border border-zinc-500 hover:bg-zinc-500">
-										Spare Parts
-									</a>
 								</div>
 							</div>
 						</div>
@@ -271,6 +281,10 @@
 					</div>
 
 			</div>
+
+		<footer class="text-center text-xs text-gray-500 py-6 border-t border-zinc-900">
+			<a href="legal.html" class="text-gray-400 no-underline hover:text-white">Legal Notice &amp; Terms</a>
+		</footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -321,7 +335,6 @@
 
 					function updateBuyLink() {
 						var qty = parseInt(input.value, 10) || 1;
-						buyLink.href = 'mailto:info@sawor.ch?subject=Order%20Request%20%E2%80%93%20Sawor%20CompactBeam&body=I%20would%20like%20to%20order%20' + qty + 'x%20Sawor%20CompactBeam.';
 					}
 
 					minus.addEventListener('click', function() {

@@ -26,6 +26,18 @@
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet-cob200.html" />
 	</url>
 	<url>
+		<loc>https://sawor.ch/spareparts.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/spareparts.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/spareparts.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/spareparts.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/de/spareparts.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/spareparts.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/spareparts.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/spareparts.html" />
+	</url>
+	<url>
 		<loc>https://sawor.ch/de/index.html</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/index.html" />
 		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/index.html" />
@@ -48,5 +60,17 @@
 		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/datasheet-cob200.html" />
 		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/datasheet-cob200.html" />
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/datasheet-cob200.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/legal.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/legal.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/legal.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/legal.html" />
+	</url>
+	<url>
+		<loc>https://sawor.ch/de/legal.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://sawor.ch/legal.html" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://sawor.ch/de/legal.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://sawor.ch/legal.html" />
 	</url>
 </urlset>

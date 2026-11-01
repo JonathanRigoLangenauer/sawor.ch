@@ -117,6 +117,13 @@
 									<div class="flex flex-wrap gap-x-6 gap-y-2 text-sm uppercase tracking-wide text-white border-y border-zinc-800 py-3">
 										<span class="flex items-center gap-2"><i class="fas fa-shipping-fast text-gray-300"></i>Kostenloser Versand</span>
 										<span class="flex items-center gap-2"><i class="fas fa-clock text-gray-300"></i>Lieferzeit 2&ndash;3 Tage</span>
+										<span class="flex items-center gap-2 relative group">
+											<i class="fas fa-undo text-gray-300"></i>30 Tage Rückgaberecht ohne Angabe von Gründen
+											<i class="fas fa-info-circle text-gray-400 cursor-help" tabindex="0"></i>
+											<span class="pointer-events-none absolute left-0 top-full mt-2 w-64 rounded-md bg-zinc-900 border border-zinc-700 p-3 text-xs normal-case tracking-normal text-gray-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity duration-200 z-10 shadow-lg">
+												Die Rücksendekosten trägt der Käufer. Der Artikel muss unbenutzt, unbeschädigt und in der Originalverpackung zurückgesendet werden, um erstattungsfähig zu sein.
+											</span>
+										</span>
 									</div>
 								</div>
 
@@ -134,9 +141,9 @@
 
 							
 
-									<a id="buy-link" href="" class="w-full text-center bg-white text-black py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-										<i class="fas fa-shopping-cart"></i> Kaufen ( Kommt Bald )
-									</a>
+									<span id="buy-link" aria-disabled="true" class="w-full text-center bg-zinc-800 text-gray-400 py-3 rounded uppercase tracking-widest font-bold cursor-not-allowed flex items-center justify-center gap-2">
+										<i class="fas fa-shopping-cart"></i> Derzeit nicht verfügbar
+									</span>
 								</div>
 
 							</div>
@@ -180,6 +187,13 @@
 								<source src="../images/Sawor_CompactBeam_vid.mov" type="video/mp4" />
 							</video>
 						</div>
+					</section>
+
+				<!-- Reparierbarkeit / Ersatzteile CTA -->
+					<section id="repair-section" class="max-w-2xl mx-auto px-8 pb-16 md:pb-24 text-center">
+						<h3 class="text-white text-2xl font-bold uppercase tracking-widest mb-4 border-b border-zinc-800 inline-block pb-2">F&#252;r Reparaturen gemacht</h3>
+						<p class="text-gray-400 text-lg leading-relaxed mb-6">Wir sind der Meinung, dass jedes Produkt reparierbar sein sollte. Jedes Teil des CompactBeam &mdash; bis hin zu Riemen und Lagern &mdash; ist einzeln erh&#228;ltlich, damit ein verschlissenes Teil nie den Austausch der ganzen Fixture bedeutet.</p>
+						<a href="spareparts.html" class="inline-block bg-white text-black px-6 py-3 rounded uppercase tracking-widest font-bold no-underline hover:bg-gray-200 transition-colors">Ersatzteile ansehen</a>
 					</section>
 
 				<!-- Unten: Über das Produkt + Bewertungen / Datenblatt -->
@@ -254,9 +268,6 @@
 									<a href="../manual.html?lang=de" class="inline-block bg-zinc-600 text-white px-5 py-2 rounded text-xs tracking-wider uppercase no-underline border border-zinc-500 hover:bg-zinc-500">
 										Bedienungsanleitung
 									</a>
-									<a href="mailto:info@sawor.ch?subject=Ersatzteilanfrage%20%E2%80%93%20Sawor%20CompactBeam" class="inline-block bg-zinc-600 text-white px-5 py-2 rounded text-xs tracking-wider uppercase no-underline border border-zinc-500 hover:bg-zinc-500">
-										Ersatzteile
-									</a>
 								</div>
 							</div>
 						</div>
@@ -264,6 +275,10 @@
 					</div>
 
 			</div>
+
+		<footer class="text-center text-xs text-gray-500 py-6 border-t border-zinc-900">
+			<a href="legal.html" class="text-gray-400 no-underline hover:text-white">Impressum &amp; AGB</a>
+		</footer>
 
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
@@ -313,7 +328,6 @@
 
 					function updateBuyLink() {
 						var qty = parseInt(input.value, 10) || 1;
-						buyLink.href = 'mailto:info@sawor.ch?subject=Bestellanfrage%20%E2%80%93%20Sawor%20CompactBeam&body=Ich%20m%C3%B6chte%20' + qty + 'x%20Sawor%20CompactBeam%20bestellen.';
 					}
 
 					minus.addEventListener('click', function() {
